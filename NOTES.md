@@ -11,7 +11,7 @@
 * ...maybe the user can input their sign directly?
 
 ### Navigation of Project
-1. **USER INPUT:** Do you know your zodiac already? (maybe) OR Welcome to the Spotify Astrology Collection! Please input your birthdate in the format MM/DD, for example 04/14.
+1. **USER INPUT:** Do you know your zodiac already? (maybe) OR Welcome to the Spotify Astrology Collection! Please input your birth date in the format MM/DD, for example 04/14.
 2. Convert that input into a day out of the year.
     * special scenario for 02/29
     * if 04/14, take that in as a string, split down middle by "/", 
