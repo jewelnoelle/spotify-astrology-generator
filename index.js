@@ -99,3 +99,5 @@ function findSign(userBirthday) {
         userSign = "Pisces";
     }
 }
+
+// see if you can shorten the month calculations... like jan = 0, feb = 31, mar = 60, etc. ...
