@@ -17,11 +17,10 @@ var userSign;
 var userBirthday;
 
 function findBirthday (birthDate) {
-    // if (birthDate === "02/29") {
-    //     userSign = "Pisces";
-    // }
+// calculates what number day of the year the user's birthday is
     birthDate.split("/");
-    //should now have birthDate = ["MM", "DD"]
+    //should now have birthDate = ["MM", "DD", "YYYY"]
+    //(you don't actually need the year!!)
     if (birthDate[0] === "01") {
         userBirthday = parseInt(birthDate[1]);
     }
@@ -60,70 +59,10 @@ function findBirthday (birthDate) {
     }
 }
 
-// OLD CODE
-// let jan = 31;
-// let feb = 29; //should i do 29?
-// let mar = 31;
-// let apr = 30;
-// let may = 31;
-// let jun = 30;
-// let jul = 31;
-// let aug = 31;
-// let sep = 30;
-// let oct = 31;
-// let nov = 30;
-// let dec = 31;
-
-// var userSign;
-// var userBirthday;
-
-// function findBirthday (birthDate) {
-//     // if (birthDate === "02/29") {
-//     //     userSign = "Pisces";
-//     // }
-//     birthDate.split("/");
-//     //should now have birthDate = ["MM", "DD"]
-//     if (birthDate[0] === "01") {
-//         userBirthday = parseInt(birthDate[1]);
-//     }
-//     if (birthDate[0] === "02" && birthDate[1] != "29") {
-//         userBirthday = jan + parseInt(birthDate[1]); 
-//     }
-//     if (birthDate[0] === "03") {
-//         userBirthday = jan + feb + parseInt(birthDate[1]);
-//     }
-//     if (birthDate[0] === "04") {
-//         userBirthday = jan + feb + mar + parseInt(birthDate[1]);
-//     }
-//     if (birthDate[0] === "05") {
-//         userBirthday = jan + feb + mar + apr + parseInt(birthDate[1]);
-//     }
-//     if (birthDate[0] === "06") {
-//         userBirthday = jan + feb + mar + apr + may + parseInt(birthDate[1]);
-//     }
-//     if (birthDate[0] === "07") {
-//         userBirthday = jan + feb + mar + apr + may + jun + parseInt(birthDate[1]);
-//     }
-//     if (birthDate[0] === "08") {
-//         userBirthday = jan + feb + mar + apr + may + jun + jul + parseInt(birthDate[1]);
-//     }
-//     if (birthDate[0] === "09") {
-//         userBirthday = jan + feb + mar + apr + may + jun + jul + aug + parseInt(birthDate[1]);
-//     }
-//     if (birthDate[0] === "10") {
-//         userBirthday = jan + feb + mar + apr + may + jun + jul + aug + sep + parseInt(birthDate[1]);
-//     }
-//     if (birthDate[0] === "11") {
-//         userBirthday = jan + feb + mar + apr + may + jun + jul + aug + sep + oct + parseInt(birthDate[1]);
-//     }
-//     if (birthDate[0] === "12") {
-//         userBirthday = jan + feb + mar + apr + may + jun + jul + aug + sep + oct + nov + parseInt(birthDate[1]);
-//     }
-// }
-
 // WHAT DO WE DO ABOUT CUSPS?? ...CUSPS AREN'T REAL... BUT WHAT DO WE *DO?*
 
 function findSign(userBirthday) {
+// 
     if (userBirthday >= 81 && userBirthday <= 110) {
         userSign = "Aries";
     }
@@ -162,4 +101,110 @@ function findSign(userBirthday) {
     }
 }
 
-// see if you can shorten the month calculations... like jan = 0, feb = 31, mar = 60, etc. ...
+// see if you can shorten the month calculations... like jan = 0, feb = 31, mar = 60, etc. ... EDIT: DONE!!
+
+// EventHandlers
+function renderHomePage() {
+    // creates the HTML elements for the home page
+    resetMainDiv();
+
+    const h2 = document.createElement("h2");
+    const p = document.createElement("p");
+    const a = document.createElement("a");
+    // const href = document.createElement("href");
+    
+    h2.innerText = "Find Playlists Based On Your Zodiac"
+    h2.style.padding = "20px"
+    
+    p.innerText = "Input your birthday to receive music suggestions based on your astrological sign!"
+    p.style.paddingLeft = "20px"
+    p.style.paddingBottom = "20px"
+    p.style.paddingRight = "20px"
+    
+    a.href.innerText = "Start Generator"
+    a.href.URL = "#!"
+    a.class = "pink accent-2 waves-effect waves-light btn-large"
+
+    mainDiv().appendChild(h2);
+    mainDiv().appendChild(p);
+    mainDiv().appendChild(a);
+}
+
+function renderViewAllPlaylistsPage() {
+    resetMainDiv();
+
+    const h2 = document.createElement("h2");
+    // const p = document.createElement("p");
+    const ul = document.createElement("ul");
+    const li = document.createElement("li");
+   
+    h2.innerText = "All Zodiac Playlists"
+    h2.style.padding = "20px"
+    
+    li.innerText = "Official Aries Spotify playlist"
+    li.style.paddingLeft = "20px"
+
+    ul.appendChild(li);
+
+    mainDiv().appendChild(h2);
+    mainDiv().appendChild(ul);
+
+    // p.innerText = "Input your birthday to receive music suggestions based on your astrological sign!"
+    // p.style.paddingLeft = "20px"
+    // p.style.paddingBottom = "20px"
+    // p.style.paddingRight = "20px"
+}
+
+// Helpers
+function resetMainDiv() {
+    mainDiv().innerHTML = ""
+}
+
+// NODE GETTERS
+const mainDiv = () => document.getElementById("main")
+const viewAllPlaylistsLink = () => document.getElementById("view-all-playlists-link")
+const homePageLink = () => document.getElementById("home-page-link")
+const startGeneratorButton = () => document.getElementById("start-generator-button")
+
+// EventListeners
+
+function attachViewAllPlaylistsClickEvent() {
+    viewAllPlaylistsLink().addEventListener("click", renderViewAllPlaylistsPage)
+}
+
+function attachHomePageClickEvent() {
+    homePageLink().addEventListener("click", renderHomePage)
+}
+
+function attachStartGeneratorClickEvent() {
+    startGeneratorButton().addEventListener("click", renderPlaylistGeneratorPage)
+}
+
+//
+
+// DOMContentLoaded
+document.addEventListener("DOMContentLoaded", () => {
+    renderHomePage();
+    attachViewAllPlaylistsClickEvent();
+    attachHomePageClickEvent();
+    attachStartGeneratorClickEvent();
+})
+
+
+
+
+
+
+
+
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.dropdown-trigger');
+    var instances = M.Dropdown.init(elems, options);
+  });
+
+  // Or with jQuery
+
+  $('.dropdown-trigger').dropdown({hover: false});
