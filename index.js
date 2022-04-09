@@ -1,17 +1,17 @@
 //MONTH VARIABLES;
 
-let jan = 31;
-let feb = 28; //should i do 29?
-let mar = 31;
-let apr = 30;
-let may = 31;
-let jun = 30;
-let jul = 31;
-let aug = 31;
-let sep = 30;
-let oct = 31;
-let nov = 30;
-let dec = 31;
+let jan = 0;
+let feb = 31;
+let mar = 60;
+let apr = 91;
+let may = 121;
+let jun = 152
+let jul = 182;
+let aug = 213;
+let sep = 244;
+let oct = 274;
+let nov = 305;
+let dec = 335;
 
 var userSign;
 var userBirthday;
@@ -25,40 +25,102 @@ function findBirthday (birthDate) {
     if (birthDate[0] === "01") {
         userBirthday = parseInt(birthDate[1]);
     }
-    if (birthDate[0] === "02" && birthDate[1] != "29") {
-        userBirthday = jan + parseInt(birthDate[1]); 
+    if (birthDate[0] === "02") {
+        userBirthday = feb + parseInt(birthDate[1]); 
     }
     if (birthDate[0] === "03") {
-        userBirthday = jan + feb + parseInt(birthDate[1]);
+        userBirthday = mar + parseInt(birthDate[1]);
     }
     if (birthDate[0] === "04") {
-        userBirthday = jan + feb + mar + parseInt(birthDate[1]);
+        userBirthday = apr + parseInt(birthDate[1]);
     }
     if (birthDate[0] === "05") {
-        userBirthday = jan + feb + mar + apr + parseInt(birthDate[1]);
+        userBirthday = may + parseInt(birthDate[1]);
     }
     if (birthDate[0] === "06") {
-        userBirthday = jan + feb + mar + apr + may + parseInt(birthDate[1]);
+        userBirthday = jun + parseInt(birthDate[1]);
     }
     if (birthDate[0] === "07") {
-        userBirthday = jan + feb + mar + apr + may + jun + parseInt(birthDate[1]);
+        userBirthday = jul + parseInt(birthDate[1]);
     }
     if (birthDate[0] === "08") {
-        userBirthday = jan + feb + mar + apr + may + jun + jul + parseInt(birthDate[1]);
+        userBirthday = aug + parseInt(birthDate[1]);
     }
     if (birthDate[0] === "09") {
-        userBirthday = jan + feb + mar + apr + may + jun + jul + aug + parseInt(birthDate[1]);
+        userBirthday = sep + parseInt(birthDate[1]);
     }
     if (birthDate[0] === "10") {
-        userBirthday = jan + feb + mar + apr + may + jun + jul + aug + sep + parseInt(birthDate[1]);
+        userBirthday = oct + parseInt(birthDate[1]);
     }
     if (birthDate[0] === "11") {
-        userBirthday = jan + feb + mar + apr + may + jun + jul + aug + sep + oct + parseInt(birthDate[1]);
+        userBirthday = nov + parseInt(birthDate[1]);
     }
     if (birthDate[0] === "12") {
-        userBirthday = jan + feb + mar + apr + may + jun + jul + aug + sep + oct + nov + parseInt(birthDate[1]);
+        userBirthday = dec + parseInt(birthDate[1]);
     }
 }
+
+// OLD CODE
+// let jan = 31;
+// let feb = 29; //should i do 29?
+// let mar = 31;
+// let apr = 30;
+// let may = 31;
+// let jun = 30;
+// let jul = 31;
+// let aug = 31;
+// let sep = 30;
+// let oct = 31;
+// let nov = 30;
+// let dec = 31;
+
+// var userSign;
+// var userBirthday;
+
+// function findBirthday (birthDate) {
+//     // if (birthDate === "02/29") {
+//     //     userSign = "Pisces";
+//     // }
+//     birthDate.split("/");
+//     //should now have birthDate = ["MM", "DD"]
+//     if (birthDate[0] === "01") {
+//         userBirthday = parseInt(birthDate[1]);
+//     }
+//     if (birthDate[0] === "02" && birthDate[1] != "29") {
+//         userBirthday = jan + parseInt(birthDate[1]); 
+//     }
+//     if (birthDate[0] === "03") {
+//         userBirthday = jan + feb + parseInt(birthDate[1]);
+//     }
+//     if (birthDate[0] === "04") {
+//         userBirthday = jan + feb + mar + parseInt(birthDate[1]);
+//     }
+//     if (birthDate[0] === "05") {
+//         userBirthday = jan + feb + mar + apr + parseInt(birthDate[1]);
+//     }
+//     if (birthDate[0] === "06") {
+//         userBirthday = jan + feb + mar + apr + may + parseInt(birthDate[1]);
+//     }
+//     if (birthDate[0] === "07") {
+//         userBirthday = jan + feb + mar + apr + may + jun + parseInt(birthDate[1]);
+//     }
+//     if (birthDate[0] === "08") {
+//         userBirthday = jan + feb + mar + apr + may + jun + jul + parseInt(birthDate[1]);
+//     }
+//     if (birthDate[0] === "09") {
+//         userBirthday = jan + feb + mar + apr + may + jun + jul + aug + parseInt(birthDate[1]);
+//     }
+//     if (birthDate[0] === "10") {
+//         userBirthday = jan + feb + mar + apr + may + jun + jul + aug + sep + parseInt(birthDate[1]);
+//     }
+//     if (birthDate[0] === "11") {
+//         userBirthday = jan + feb + mar + apr + may + jun + jul + aug + sep + oct + parseInt(birthDate[1]);
+//     }
+//     if (birthDate[0] === "12") {
+//         userBirthday = jan + feb + mar + apr + may + jun + jul + aug + sep + oct + nov + parseInt(birthDate[1]);
+//     }
+// }
+
 // WHAT DO WE DO ABOUT CUSPS?? ...CUSPS AREN'T REAL... BUT WHAT DO WE *DO?*
 
 function findSign(userBirthday) {

@@ -1,5 +1,7 @@
 //I'M TWEAKING THIS TO MAKE IT MORE EFFICIENT !!
 
+//NOTE: this has now been migrated to index.js
+
 let jan = 0;
 let feb = 31;
 let mar = 60;

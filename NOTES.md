@@ -15,3 +15,6 @@
 2. Convert that input into a day out of the year.
     * special scenario for 02/29
     * if 04/14, take that in as a string, split down middle by "/", 
+
+### Questions You Have
+* No redirects; are we not allowed to provide a link to something within the API? i.e., linking to a Spotify playlist...
