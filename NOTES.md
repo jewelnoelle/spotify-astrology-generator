@@ -16,5 +16,8 @@
     * special scenario for 02/29
     * if 04/14, take that in as a string, split down middle by "/", 
 
+### Browsing Materialize
+
 ### Questions You Have
 * No redirects; are we not allowed to provide a link to something within the API? i.e., linking to a Spotify playlist...
+* Enoch mentioned "if you're not done with your project but you have your review..." In what scenario would that happen?
