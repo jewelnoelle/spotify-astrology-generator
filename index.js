@@ -111,7 +111,7 @@ function renderHomePage() {
     const h2 = document.createElement("h2");
     const p = document.createElement("p");
     const a = document.createElement("a");
-    // const href = document.createElement("href");
+    const button = document.createElement("button");
     
     h2.innerText = "Find Playlists Based On Your Zodiac"
     h2.style.padding = "20px"
@@ -121,9 +121,15 @@ function renderHomePage() {
     p.style.paddingBottom = "20px"
     p.style.paddingRight = "20px"
     
-    a.href.innerText = "Start Generator"
-    a.href.URL = "#!"
-    a.class = "pink accent-2 waves-effect waves-light btn-large"
+    a.innerText = "Start Generator"
+    a.href = "#!"
+    a.style.backgroundColor = "#ff4081"
+    a.style.color = "#ffffff"
+    a.style.padding = "10px"
+    a.style.border = "none"
+    a.style.boxShadow = "4px 4px 5px #bdbdbd"
+    a.style.boxShadow.blur = 
+    a.style.marginLeft = "20px"
 
     mainDiv().appendChild(h2);
     mainDiv().appendChild(p);
@@ -155,6 +161,22 @@ function renderViewAllPlaylistsPage() {
     // p.style.paddingRight = "20px"
 }
 
+function renderPlaylistGeneratorPage() {
+    resetMainDiv();
+
+    const h2 = document.createElement("h2")
+    const p = document.createElement("p")
+
+    h2.innerText = "Playlist Generator"
+    h2.style.marginTop = "0"
+
+    p.innerText = "Input your birthday below for your playlist!"
+
+    mainDiv().appendChild(h2);
+    mainDiv().appendChild(p);
+}
+
+
 // Helpers
 function resetMainDiv() {
     mainDiv().innerHTML = ""
@@ -164,7 +186,7 @@ function resetMainDiv() {
 const mainDiv = () => document.getElementById("main")
 const viewAllPlaylistsLink = () => document.getElementById("view-all-playlists-link")
 const homePageLink = () => document.getElementById("home-page-link")
-const startGeneratorButton = () => document.getElementById("start-generator-button")
+const startGeneratorButton = () => document.getElementById("start-generator-link-button")
 
 // EventListeners
 
@@ -180,8 +202,6 @@ function attachStartGeneratorClickEvent() {
     startGeneratorButton().addEventListener("click", renderPlaylistGeneratorPage)
 }
 
-//
-
 // DOMContentLoaded
 document.addEventListener("DOMContentLoaded", () => {
     renderHomePage();
@@ -189,22 +209,3 @@ document.addEventListener("DOMContentLoaded", () => {
     attachHomePageClickEvent();
     attachStartGeneratorClickEvent();
 })
-
-
-
-
-
-
-
-
-
-
-
-document.addEventListener('DOMContentLoaded', function() {
-    var elems = document.querySelectorAll('.dropdown-trigger');
-    var instances = M.Dropdown.init(elems, options);
-  });
-
-  // Or with jQuery
-
-  $('.dropdown-trigger').dropdown({hover: false});
