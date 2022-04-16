@@ -1,11 +1,12 @@
-# Project Name
-*Overview; what project is about and its purpose.*
+# Spotify Astrology Playlist Generator
+
+### Overview
 With this application, users can input their birthday and receive Spotify playlist suggestions based on their zodiac sign.
 
 ### Requirements
 * Have json-server installed
 * Know your birthday
-* (Preferably) Have a Spotify account (either Free or Premium)
+* Have a Spotify account (either Free or Premium)
 
 ### Installation Instructions
 * Fork and clone
