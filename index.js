@@ -4,7 +4,8 @@ var userBirthday;
 function findBirthday (userInput) {
 // calculates what number day of the year the user's birthday is
 
-// MONTH VARIABLES;
+// MONTH VARIABLES; value of month is the amount of days that has passed before its first day, i.e. 0 days have passed of a year before Jan. 1st, 31 days have passed of a year before Feb. 1st, etc.
+
 let jan = 0; 
 let feb = 31;
 let mar = 60;
@@ -97,54 +98,65 @@ let dec = 335;
             userSign = "Pisces";
         }
 
-        return userSign
+        function describeSign(userSign) { 
+            const p = document.createElement("p");
+                
+            if (userSign = "Aries") {
+                p.innerText = `You are an ${userSign}! Aries is the first sign of the Zodiac. It is associated with fresh vigor and new beginnings. Individuals born under this sign are said to have an enthusiastic, adventurous, and passionate character. They are usually ambitious, humorous, and pioneering. On the less positive side, they're also said to be prone to selfishness, boastfulness, intolerance, impulsiveness, and impatience.`
+            }
+
+            if (userSign = "Taurus") {
+                p.innerText = `You are a ${userSign}! Taurus is the second sign of the Zodiac and is associated with material pleasure. Individuals born under this sign are thought to have a calm, patient, reliable, loyal, affectionate, sensuous, ambitious, and determined character. They are also prone to hedonism, laziness, inflexibility, jealousy, and antipathy.`
+            }
+
+            if (userSign = "Gemini") {
+                p.innerText = `You are a ${userSign}! Gemini is the third sign of the Zodiac and is associated with youth and versatility. Individuals born under this sign are thought to have a sociable, fun-loving, versatile, lively, communicative, liberal, intelligent, mentally active, and friendly character. They are also thought to be prone to moodiness, inconsistency, superficiality, restlessness, and laziness.`
+            }
+
+            if (userSign = "Cancer") {
+                p.innerText = `You are a ${userSign}! Cancer is the fourth sign of the Zodiac. It is associated with family and domesticity. Individuals born under this sign are thought to have a kind, emotional, romantic, imaginative, sympathetic, nurturing, and intuitive character. They are also supposed to be prone to changeability, moodiness, hypersensitivity, depression, and clingy behavior.`
+            }
+
+            if (userSign = "Leo") {
+                p.innerText = `You are a ${userSign}! Leo is the fifth sign of the Zodiac and is associated with the keywords magnanimous, generous, hospitable, caring, warm, authoritative, active, and open. Leos are typically pictured as very dignified and regal. They are hard-working, ambitious, and enthusiastic, however, they are supposedly prone to laziness, often choosing to take "the easy way out." They are known to be exuberant, extroverted, and generous. They have a natural dramatic flair and are very creative. They are typically very self-assured and love taking center-stage in whatever arena they are in.`
+            }
+
+            if (userSign = "Virgo") {
+                p.innerText = `You are a ${userSign}! Virgo is the sixth sign of the Zodiac. It is associated with purity and service. Individuals born under this sign are thought to have a diligent, analytical, self-sufficient, controlled, orderly, and modest character. But they are also prone to fussiness, perfectionism, harsh criticism, coldness, and hypochondria.`
+            }
+
+            if (userSign = "Libra") {
+                p.innerText = `You are a ${userSign}! Libra is the seventh sign of the Zodiac. It is associated with justice. Individuals born under this sign are thought to have a pleasant, articulate, charming, social, charismatic character. They are artistic. But they also possess a fair, refined, diplomatic, even-tempered and self-sufficient character. On the negative side, they are thought to be indecisive, lazy, aloof, flirtatious, and shallow. They are also supposedly extravagant, frivolous, impatient, envious, and quarrelsome.`
+            }
+
+            if (userSign = "Scorpio") {
+                p.innerText = `You are a ${userSign}! Scorpio is the eighth sign of the Zodiac. It is associated with intensity, passion, and power. Individuals born under this sign are thought to have a complex, analytical, patient, keenly perceptive, inquisitive, focused, determined, hypnotic, and self-contained character. They are also prone to extremity, jealousy, envy, secretiveness, possessiveness, cruelty, and cunning.`
+            }
+
+            if (userSign = "Sagittarius") {
+                p.innerText = `You are a ${userSign}! Sagittarius is the ninth sign of the Zodiac. It is associated with travel and expansion. Individuals born under this sign are thought to have a straight-forward, dynamic, highly intelligent, extremely clever, ethical, humorous, generous, open-hearted, compassionate, and energetic character. They are also prone to restlessness, impulsiveness, impatience, and recklessness.`
+            }
+
+            if (userSign = "Capricorn") {
+                p.innerText = `You are a ${userSign}! Capricorn is the 10th sign of the Zodiac and is associated with hard work and business affairs. Individuals born under this sign are thought to have an ambitious, modest, patient, responsible, stable, trustworthy, powerful, intellectual, perspicacious, and persistent character. They are also prone to coldness, conservatism, rigidity, materialism, and dullness.`
+            }
+
+            if (userSign = "Aquarius") {
+                p.innerText = `You are an ${userSign}! Aquarius is the 11th sign of the Zodiac and is associated with future ideas and the unusual. Individuals born under this sign are thought to have a modest, creative, challenging, inquisitive, entertaining, progressive, stimulating, nocturnal, and independent character. They are also prone to rebelliousness, coldness, erraticism, indecisiveness, and impracticality.`
+            }
+
+            if (userSign = "Pisces") {
+                p.innerText = `You are a ${userSign}! Pisces is the 12th and last sign of the Zodiac and is associated with human emotions. Individuals born under this sign are thought to be tolerant, modest, dreamy, romantic, humorous, generous, emotional, receptive, and affectionate. They are thought to have an honest character. But they are also prone to exaggeration, fickleness, passiveness, hypersensitivity, and paranoia.`
+            }
+        mainDiv().appendChild(p);
+        }
+
+
+    describeSign(userSign);
     }    
+    
+    findSign(userBirthday);
 }
-
-// WHAT DO WE DO ABOUT CUSPS?? ...CUSPS AREN'T REAL... BUT WHAT DO WE *DO?* ANSWER: ignore 'em. no cusps here :)
-
-function findSign(userBirthday) {
-    // calculates user's sign based on their birthday
-
-    if (userBirthday >= 81 && userBirthday <= 110) {
-        userSign = "Aries";
-    }
-    if (userBirthday >= 111 && userBirthday <= 141) {
-        userSign = "Taurus";
-    }
-    if (userBirthday >= 142 && userBirthday <= 172) {
-        userSign = "Gemini";
-    }
-    if (userBirthday >= 173 && userBirthday <= 204) {
-        userSign = "Cancer";
-    }
-    if (userBirthday >= 205 && userBirthday <= 235) {
-        userSign = "Leo";
-    }
-    if (userBirthday >= 236 && userBirthday <= 266) {
-        userSign = "Virgo";
-    }
-    if (userBirthday >= 267 && userBirthday <= 296) {
-        userSign = "Libra";
-    }
-    if (userBirthday >= 297 && userBirthday <= 326) {
-        userSign = "Scorpio";
-    }
-    if (userBirthday >= 327 && userBirthday <= 356) {
-        userSign = "Sagittarius";
-    }
-    if (userBirthday >= 357 && userBirthday <= 366 || userBirthday >= 1 && userBirthday <= 19) {
-        userSign = "Capricorn";
-    }
-    if (userBirthday >= 20 && userBirthday <= 49) {
-        userSign = "Aquarius";
-    }
-    if (userBirthday >= 50 && userBirthday <= 80) {
-        userSign = "Pisces";
-    }
-}
-
-// see if you can shorten the month calculations... like jan = 0, feb = 31, mar = 60, etc. ... EDIT: DONE!!
 
 // EventHandlers
 function renderHomePage() {
@@ -255,6 +267,7 @@ const mainDiv = () => document.getElementById("main")
 const viewAllPlaylistsLink = () => document.getElementById("view-all-playlists-link")
 const homePageLink = () => document.getElementById("home-page-link")
 const startGeneratorButton = () => document.getElementById("start-generator-link")
+const generatePlaylistsButton = () => document.getElementById("generate-playlists-link")
 
 // EventListeners
 
@@ -270,10 +283,15 @@ function attachStartGeneratorClickEvent() {
     startGeneratorButton().addEventListener("click", renderPlaylistGeneratorPage)
 }
 
+function attachGeneratePlaylistsClickEvent() {
+    generatePlaylistsButton().addEventListener("click",renderGeneratePlaylists)
+}
+
 // DOMContentLoaded
 document.addEventListener("DOMContentLoaded", () => {
     renderHomePage();
     attachViewAllPlaylistsClickEvent();
     attachHomePageClickEvent();
     attachStartGeneratorClickEvent();
+    attachGeneratePlaylistsClickEvent();
 })
