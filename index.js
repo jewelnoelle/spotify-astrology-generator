@@ -1,10 +1,10 @@
 var userSign;
 var userBirthday;
-var userInput = document.getElementById("user-birthday")
-// var userInputTakeTwo = prompt("What is your birthday? MM/DD/YYYY, please!") feel like this is cheating :p
+// var userInput = document.getElementById("user-birthday")
+var userInputTakeTwo = prompt("What is your birthday? MM/DD/YYYY, please!")
 //ADD VAR FOR RESULTS!!
 
-function findBirthday (userInput) {
+function findBirthday (userInputTakeTwo) {
 // calculates what number day of the year the user's birthday is
 
 // MONTH VARIABLES; value of month is the amount of days that has passed before its first day, i.e. 0 days have passed of a year before Jan. 1st, 31 days have passed of a year before Feb. 1st, etc.
@@ -22,7 +22,7 @@ let oct = 274;
 let nov = 305;
 let dec = 335;
 
-    let birthDate = userInput.split("-");
+    let birthDate = userInputTakeTwo.split("-");
     //should now have birthDate = ["YYYY", "MM", "DD"] (NOTE: you don't actually need the year!!)
     if (birthDate[1] === "01") {
         userBirthday = jan + parseInt(birthDate[2]);
@@ -253,7 +253,8 @@ function renderPlaylistGeneratorPage() {
     button.style.border = "none"
     button.style.boxShadow = "4px 4px 5px #bdbdbd"
     button.style.marginLeft = "20px"
-    button.addEventListener("click", findBirthday)
+    // button.addEventListener("click", findBirthday)
+    button.addEventListener("click", userInputTakeTwo)
 
     mainDiv().appendChild(h2);
     mainDiv().appendChild(p);
@@ -298,12 +299,17 @@ function attachStartGeneratorClickEvent() {
     startGeneratorButton().addEventListener("click", renderPlaylistGeneratorPage)
 }
 
+// function attachGeneratePlaylistsClickEvent() {
+//     generatePlaylistsButton().addEventListener("submit", renderPlaylistResultsPage)
+// }
+
 function attachGeneratePlaylistsClickEvent() {
-    generatePlaylistsButton().addEventListener("submit", renderPlaylistResultsPage)
+    generatePlaylistsButton().addEventListener("submit", submitEvent)
 }
 
-function logSubmitEvent(event) {
-    log.textContent = `INSERT ASTROLOGY DESCRIPTION HERE.`;
+function submitEvent(event) {
+    const p = document.createElement("p")
+    p.textContent = `INSERT ASTROLOGY DESCRIPTION HERE.`;
     event.preventDefault();
 }
 
