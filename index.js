@@ -1,11 +1,13 @@
 var userSign;
 var userBirthday;
-// var userInput = document.getElementById("user-birthday")
-var userInputTakeTwo = prompt("What is your birthday? MM/DD/YYYY, please!")
+
+// var userInputTakeTwo = prompt("What is your birthday? MM/DD/YYYY, please!")
+
 //ADD VAR FOR RESULTS!!
 
-function findBirthday (userInputTakeTwo) {
+function findBirthday (userInput) {
 // calculates what number day of the year the user's birthday is
+var userInput = document.getElementById("user-birthday").value
 
 // MONTH VARIABLES; value of month is the amount of days that has passed before its first day, i.e. 0 days have passed of a year before Jan. 1st, 31 days have passed of a year before Feb. 1st, etc.
 
@@ -22,7 +24,7 @@ let oct = 274;
 let nov = 305;
 let dec = 335;
 
-    let birthDate = userInputTakeTwo.split("-");
+    let birthDate = userInput.split("-");
     //should now have birthDate = ["YYYY", "MM", "DD"] (NOTE: you don't actually need the year!!)
     if (birthDate[1] === "01") {
         userBirthday = jan + parseInt(birthDate[2]);
@@ -244,33 +246,69 @@ function renderPlaylistGeneratorPage() {
 
     form.id = "form"
     
-    button.innerText = "Generate Playlists"
-    button.type = "submit"
-    button.id = "generate-playlists-link"
-    button.style.backgroundColor = "#ff4081"
-    button.style.color = "#ffffff"
-    button.style.padding = "10px"
-    button.style.border = "none"
-    button.style.boxShadow = "4px 4px 5px #bdbdbd"
-    button.style.marginLeft = "20px"
+    a.innerText = "Generate Playlists"
+    a.type = "submit"
+    a.href = "#!"
+    a.id = "generate-playlists-link"
+    a.style.backgroundColor = "#ff4081"
+    a.style.color = "#ffffff"
+    a.style.padding = "10px"
+    a.style.border = "none"
+    a.style.boxShadow = "4px 4px 5px #bdbdbd"
+    a.style.marginLeft = "20px"
     // button.addEventListener("click", findBirthday)
-    button.addEventListener("click", userInputTakeTwo)
+    a.addEventListener("click", renderPlaylistResultsPage)
 
     mainDiv().appendChild(h2);
     mainDiv().appendChild(p);
     mainDiv().appendChild(input);
     mainDiv().appendChild(a);
     mainDiv().appendChild(form);
-    mainDiv().appendChild(button);
+    // mainDiv().appendChild(button);
 
     form.appendChild(input);
-    form.appendChild(button);
+    form.appendChild(a);
+}
+
+// Template
+
+const listOfPlaylistsTemplate = () => {
+    return `
+    <p style="padding-top: 20px">Your sign is <strong>Aries!</strong></p>
+
+    <table class="highlight" id="playlist-results">
+    <thead>
+      <tr>
+          <th>Playlist</th>
+          <th>Duration</th>
+          <th>Playlist Link</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <td>Aries playlist</td>
+        <td>5hr 27m</td>
+        <td>aquí</td>
+      </tr>
+      <tr>
+        <td>Alan</td>
+        <td>Jellybean</td>
+        <td>$3.76</td>
+      </tr>
+      <tr>
+        <td>Jonathan</td>
+        <td>Lollipop</td>
+        <td>$7.00</td>
+      </tr>
+    </tbody>
+  </table>`
 }
 
 function renderPlaylistResultsPage () {
     resetMainDiv();
 
-    mainDiv().innerHTML = listOfPlaylists();
+    mainDiv().innerHTML = listOfPlaylistsTemplate();
 }
 
 // Helpers
@@ -304,7 +342,7 @@ function attachStartGeneratorClickEvent() {
 // }
 
 function attachGeneratePlaylistsClickEvent() {
-    generatePlaylistsButton().addEventListener("submit", submitEvent)
+    generatePlaylistsButton().addEventListener("click", submitEvent)
 }
 
 function submitEvent(event) {
@@ -322,41 +360,8 @@ document.addEventListener("DOMContentLoaded", () => {
     attachHomePageClickEvent();
     attachStartGeneratorClickEvent();
     attachGeneratePlaylistsClickEvent();
-    logSubmitEvent();
+    submitEvent();
 })
 
 // Submit Button
-form.addEventListener('submit', logSubmitEvent)
-
-// Templates
-
-const listOfPlaylistsTemplate = () => {
-    return `
-    <table class="highlight" id="playlist-results">
-    <thead>
-      <tr>
-          <th>Name</th>
-          <th>Item Name</th>
-          <th>Item Price</th>
-      </tr>
-    </thead>
-
-    <tbody>
-      <tr>
-        <td>Alvin</td>
-        <td>Eclair</td>
-        <td>$0.87</td>
-      </tr>
-      <tr>
-        <td>Alan</td>
-        <td>Jellybean</td>
-        <td>$3.76</td>
-      </tr>
-      <tr>
-        <td>Jonathan</td>
-        <td>Lollipop</td>
-        <td>$7.00</td>
-      </tr>
-    </tbody>
-  </table>`
-}
+// form.addEventListener('submit', submitEvent)
