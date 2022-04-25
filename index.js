@@ -68,9 +68,17 @@ let dec = 335;
 
         const p = document.createElement("p");
 
+        // Build Results Section
+        let results = document.createElement("li")
+        results.className = 'results'
+        // results.innerHTML = `
+        
+        // `
+
         if (userBirthday >= 81 && userBirthday <= 110) {
             userSign = "Aries";
             p.innerHTML = `<p>You are an ${userSign}! Aries is the first sign of the Zodiac. It is associated with fresh vigor and new beginnings. Individuals born under this sign are said to have an enthusiastic, adventurous, and passionate character. They are usually ambitious, humorous, and pioneering. On the less positive side, they're also said to be prone to selfishness, boastfulness, intolerance, impulsiveness, and impatience.</p>`
+
         }
         else if (userBirthday >= 111 && userBirthday <= 141) {
             userSign = "Taurus";
@@ -119,62 +127,6 @@ let dec = 335;
         else {
             p.innerHTML = "Invalid birthday entered; please re-enter your birthday."
         }
-
-        // function describeSign(userSign) { 
-        //     const p = document.createElement("p");
-                
-            // if (userSign = "Aries") {
-            //     p.innerHTML = `<p>You are an ${userSign}! Aries is the first sign of the Zodiac. It is associated with fresh vigor and new beginnings. Individuals born under this sign are said to have an enthusiastic, adventurous, and passionate character. They are usually ambitious, humorous, and pioneering. On the less positive side, they're also said to be prone to selfishness, boastfulness, intolerance, impulsiveness, and impatience.</p>`
-            // }
-
-            // else if (userSign = "Taurus") {
-            //     p.innerHTML = `<p>You are a ${userSign}! Taurus is the second sign of the Zodiac and is associated with material pleasure. Individuals born under this sign are thought to have a calm, patient, reliable, loyal, affectionate, sensuous, ambitious, and determined character. They are also prone to hedonism, laziness, inflexibility, jealousy, and antipathy.</p>`
-            // }
-
-            // else if (userSign = "Gemini") {
-            //     p.innerHTML = `<p>You are a ${userSign}! Gemini is the third sign of the Zodiac and is associated with youth and versatility. Individuals born under this sign are thought to have a sociable, fun-loving, versatile, lively, communicative, liberal, intelligent, mentally active, and friendly character. They are also thought to be prone to moodiness, inconsistency, superficiality, restlessness, and laziness.</p>`
-            // }
-
-            // else if (userSign = "Cancer") {
-            //     p.innerHTML = `<p>You are a ${userSign}! Cancer is the fourth sign of the Zodiac. It is associated with family and domesticity. Individuals born under this sign are thought to have a kind, emotional, romantic, imaginative, sympathetic, nurturing, and intuitive character. They are also supposed to be prone to changeability, moodiness, hypersensitivity, depression, and clingy behavior.</p>`
-            // }
-
-            // else if (userSign = "Leo") {
-            //     p.innerHTML = `<p>You are a ${userSign}! Leo is the fifth sign of the Zodiac and is associated with the keywords magnanimous, generous, hospitable, caring, warm, authoritative, active, and open. Leos are typically pictured as very dignified and regal. They are hard-working, ambitious, and enthusiastic, however, they are supposedly prone to laziness, often choosing to take "the easy way out." They are known to be exuberant, extroverted, and generous. They have a natural dramatic flair and are very creative. They are typically very self-assured and love taking center-stage in whatever arena they are in.</p>`
-            // }
-
-            // else if (userSign = "Virgo") {
-            //     p.innerHTML = `<p>You are a ${userSign}! Virgo is the sixth sign of the Zodiac. It is associated with purity and service. Individuals born under this sign are thought to have a diligent, analytical, self-sufficient, controlled, orderly, and modest character. But they are also prone to fussiness, perfectionism, harsh criticism, coldness, and hypochondria.</p>`
-            // }
-
-            // else if (userSign = "Libra") {
-            //     p.innerHTML = `<p>You are a ${userSign}! Libra is the seventh sign of the Zodiac. It is associated with justice. Individuals born under this sign are thought to have a pleasant, articulate, charming, social, charismatic character. They are artistic. But they also possess a fair, refined, diplomatic, even-tempered and self-sufficient character. On the negative side, they are thought to be indecisive, lazy, aloof, flirtatious, and shallow. They are also supposedly extravagant, frivolous, impatient, envious, and quarrelsome.</p>`
-            // }
-
-            // else if (userSign = "Scorpio") {
-            //     p.innerHTML = `<p>You are a ${userSign}! Scorpio is the eighth sign of the Zodiac. It is associated with intensity, passion, and power. Individuals born under this sign are thought to have a complex, analytical, patient, keenly perceptive, inquisitive, focused, determined, hypnotic, and self-contained character. They are also prone to extremity, jealousy, envy, secretiveness, possessiveness, cruelty, and cunning.</p>`
-            // }
-
-            // else if (userSign = "Sagittarius") {
-            //     p.innerHTML = `<p>You are a ${userSign}! Sagittarius is the ninth sign of the Zodiac. It is associated with travel and expansion. Individuals born under this sign are thought to have a straight-forward, dynamic, highly intelligent, extremely clever, ethical, humorous, generous, open-hearted, compassionate, and energetic character. They are also prone to restlessness, impulsiveness, impatience, and recklessness.</p>`
-            // }
-
-            // else if (userSign = "Capricorn") {
-            //     p.innerHTML = `<p>You are a ${userSign}! Capricorn is the 10th sign of the Zodiac and is associated with hard work and business affairs. Individuals born under this sign are thought to have an ambitious, modest, patient, responsible, stable, trustworthy, powerful, intellectual, perspicacious, and persistent character. They are also prone to coldness, conservatism, rigidity, materialism, and dullness.</p>`
-            // }
-
-            // else if (userSign = "Aquarius") {
-            //     p.innerHTML = `<p>You are an ${userSign}! Aquarius is the 11th sign of the Zodiac and is associated with future ideas and the unusual. Individuals born under this sign are thought to have a modest, creative, challenging, inquisitive, entertaining, progressive, stimulating, nocturnal, and independent character. They are also prone to rebelliousness, coldness, erraticism, indecisiveness, and impracticality.</p>`
-            // }
-
-            // else if (userSign = "Pisces") {
-            //     p.innerHTML = `<p>You are a ${userSign}! Pisces is the 12th and last sign of the Zodiac and is associated with human emotions. Individuals born under this sign are thought to be tolerant, modest, dreamy, romantic, humorous, generous, emotional, receptive, and affectionate. They are thought to have an honest character. But they are also prone to exaggeration, fickleness, passiveness, hypersensitivity, and paranoia.</p>`
-            // }
-
-            // else {
-            //     p.innerHTML = `<p>Invalid date submitted!</p>`
-            // }
-
         mainDiv().appendChild(p);
         }
     findSign(userBirthday);
