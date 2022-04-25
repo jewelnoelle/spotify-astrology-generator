@@ -12,7 +12,7 @@
  var request = require('request'); // "Request" library
 
  var client_id = 'd9ab1dd64f9340cea580059be1dff6f5'; // Your client id
- var client_secret = '21d259c05a2e474c90b7a5218e9ea90f'; // Your secret
+ var client_secret = 'CLIENT_SECRET'; // Your secret
  
  // your application requests authorization
  var authOptions = {
@@ -43,4 +43,3 @@
      });
    }
  });
-
