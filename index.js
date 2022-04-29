@@ -293,8 +293,21 @@ function resetMainDiv() {
 }
 
 // Globals
-// const baseUrl = 'http://localhost:3000';
-// let playlists = [];
+const baseUrl = 'https://api.spotify.com/v1/playlists/';
+let playlists = {
+    "AriesList": ["37i9dQZF1DX2DC3Q7JOmYe", "37i9dQZF1DX66m4icL86Ru"],
+    "TaurusList": [],
+    "GeminiList": [],
+    "CancerList": [],
+    "LeoList": [],
+    "VirgoList": [],
+    "LibraList": [],
+    "ScorpioList": [],
+    "SagittariusList": [],
+    "CapricornList": [],
+    "AquariusList": [],
+    "PiscesList": [],
+};
 
 // NODE GETTERS
 const mainDiv = () => document.getElementById("main")
@@ -305,6 +318,13 @@ const generatePlaylistsButton = () => document.getElementById("generate-playlist
 const playlistResultsPage = () => document.getElementById("playlist-results")
 
 // EventListeners
+
+const loadPlaylists = () => {
+    fetch(baseUrl + playlistId + "?market=US")
+}
+
+//
+
 function attachViewAllPlaylistsClickEvent() {
     viewAllPlaylistsLink().addEventListener("click", renderViewAllPlaylistsPage)
 }

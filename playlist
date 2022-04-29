@@ -1,0 +1,10 @@
+const playlist = {
+    "Aries": [
+        {
+            "(playlist).name": "Aries",
+            "(playlist).description": "desc",
+            "(playlist).external_urls.spotify": "link to playlist",
+            "(playlist).owner": "spotify",
+        }
+    ],
+}
