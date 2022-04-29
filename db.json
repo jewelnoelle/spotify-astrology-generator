@@ -1,126 +1,122 @@
 {
-  "playlists": [
+  "Aries": [
     {
-      "Aries": [
-        {
-        "id": 1,
-        "name": "playlist-name",
-        "description": "playlist description",
-        "creator": "Spotify",
-        "songCount": "200",
-        "playlistDuration": "4 hours"
-        }
-      ],
+    "id": 1,
+    "name": "playlist-name",
+    "description": "playlist description",
+    "creator": "Spotify",
+    "songCount": "100",
+    "playlistDuration": "4 hours"
+    }
+  ],
 
-      "Taurus": [
-        {
-        "id": 2,
-        "name": "playlist-name",
-        "description": "playlist description",
-        "creator": "Spotify",
-        "songCount": "200",
-        "playlistDuration": "4 hours"
-        }
-      ],
+  "Taurus": [
+    {
+    "id": 2,
+    "name": "playlist-name",
+    "description": "playlist description",
+    "creator": "Spotify",
+    "songCount": "200",
+    "playlistDuration": "4 hours"
+    }
+  ],
 
-      "Gemini": [
-        {
-        "id": 3,
-        "name": "playlist-name",
-        "description": "playlist description",
-        "creator": "Spotify",
-        "songCount": "200",
-        "playlistDuration": "4 hours"
-        }
-      ],
+  "Gemini": [
+    {
+    "id": 3,
+    "name": "playlist-name",
+    "description": "playlist description",
+    "creator": "Spotify",
+    "songCount": "200",
+    "playlistDuration": "4 hours"
+    }
+  ],
 
-      "Cancer": [
-        {
-        "id": 4,
-        "name": "playlist-name",
-        "description": "playlist description",
-        "creator": "Spotify",
-        "songCount": "200",
-        "playlistDuration": "4 hours"
-        }
-      ],
+  "Cancer": [
+    {
+    "id": 4,
+    "name": "playlist-name",
+    "description": "playlist description",
+    "creator": "Spotify",
+    "songCount": "200",
+    "playlistDuration": "4 hours"
+    }
+  ],
 
-      "Leo": [
-        {
-        "id": 5,
-        "name": "playlist-name",
-        "description": "playlist description",
-        "creator": "Spotify",
-        "songCount": "200",
-        "playlistDuration": "4 hours"
-        }
-      ],
+  "Leo": [
+    {
+    "id": 5,
+    "name": "playlist-name",
+    "description": "playlist description",
+    "creator": "Spotify",
+    "songCount": "200",
+    "playlistDuration": "4 hours"
+    }
+  ],
 
-      "Virgo": [
-        {
-        "id": 6,
-        "name": "playlist-name",
-        "description": "playlist description",
-        "creator": "Spotify",
-        "songCount": "200",
-        "playlistDuration": "4 hours"
-        }
-      ],
+  "Virgo": [
+    {
+    "id": 6,
+    "name": "playlist-name",
+    "description": "playlist description",
+    "creator": "Spotify",
+    "songCount": "200",
+    "playlistDuration": "4 hours"
+    }
+  ],
 
-      "Libra": [
-        {
-        "id": 7,
-        "name": "playlist-name",
-        "description": "playlist description",
-        "creator": "Spotify",
-        "songCount": "200",
-        "playlistDuration": "4 hours"
-        }
-      ],
+  "Libra": [
+    {
+    "id": 7,
+    "name": "playlist-name",
+    "description": "playlist description",
+    "creator": "Spotify",
+    "songCount": "200",
+    "playlistDuration": "4 hours"
+    }
+  ],
 
-      "Scorpio": [
-        {
-        "id": 8,
-        "name": "playlist-name",
-        "description": "playlist description",
-        "creator": "Spotify",
-        "songCount": "200",
-        "playlistDuration": "4 hours"
-        }
-      ],
+  "Scorpio": [
+    {
+    "id": 8,
+    "name": "playlist-name",
+    "description": "playlist description",
+    "creator": "Spotify",
+    "songCount": "200",
+    "playlistDuration": "4 hours"
+    }
+  ],
 
-      "Sagittarius": [
-        {
-        "id": 9,
-        "name": "playlist-name",
-        "description": "playlist description",
-        "creator": "Spotify",
-        "songCount": "200",
-        "playlistDuration": "4 hours"
-        }
-      ],
+  "Sagittarius": [
+    {
+    "id": 9,
+    "name": "playlist-name",
+    "description": "playlist description",
+    "creator": "Spotify",
+    "songCount": "200",
+    "playlistDuration": "4 hours"
+    }
+  ],
 
-      "Capricorn": [
-        {
-        "id": 10,
-        "name": "playlist-name",
-        "description": "playlist description",
-        "creator": "Spotify",
-        "songCount": "200",
-        "playlistDuration": "4 hours"
-        }
-      ],
+  "Capricorn": [
+    {
+    "id": 10,
+    "name": "playlist-name",
+    "description": "playlist description",
+    "creator": "Spotify",
+    "songCount": "200",
+    "playlistDuration": "4 hours"
+    }
+  ],
 
-      "Aquarius": [
-        {
-        "id": 11,
-        "name": "playlist-name",
-        "description": "playlist description",
-        "creator": "Spotify",
-        "songCount": "200",
-        "playlistDuration": "4 hours"
-        }
-      ]
+  "Aquarius": [
+    {
+    "id": 11,
+    "name": "playlist-name",
+    "description": "playlist description",
+    "creator": "Spotify",
+    "songCount": "200",
+    "playlistDuration": "4 hours"
     }
   ],
 
@@ -137,19 +133,23 @@
 
   "posts": [
     {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
+      "status": "not needed at the moment"
     }
   ],
   "comments": [
     {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "status": "not needed at the moment"
     }
   ],
-  "profile": {
-    "name": "typicode"
+  "profile": [
+    {
+    "status": "not needed at the moment"
   }
+  ],
+
+  "playlists": [
+    {
+      "status": "not needed at the moment"
+    }
+  ]
 }

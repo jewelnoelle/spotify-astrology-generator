@@ -1,9 +1,21 @@
+// Fetch Requests
+
+function getAllPlaylists() {
+    fetch('http://localhost:3000/playlists')
+    .then(res => res.json())
+    .then(playlistData => playlistData.forEach(playlist => renderOnePlaylist(playlist)))
+}
+
+// Initial Render
+function initialize() {
+    getAllPlaylists();
+}
+
+initialize();
+
+// Birthday Functions START
 var userSign;
 var userBirthday;
-
-// var userInputTakeTwo = prompt("What is your birthday? MM/DD/YYYY, please!")
-
-//ADD VAR FOR RESULTS!!
 
 function findBirthday (userInput) {
 // calculates what number day of the year the user's birthday is
@@ -127,6 +139,14 @@ let dec = 335;
         else {
             p.innerHTML = "Invalid birthday entered; please re-enter your birthday."
         }
+
+        let pDiv = document.getElementById("sign-result")
+        debugger
+        if (pDiv) {
+            pDiv.remove();
+        }
+
+        p.id = "sign-result"
         mainDiv().appendChild(p);
         }
     findSign(userBirthday);
@@ -136,8 +156,9 @@ function birthdayZodiac () {
     findBirthday();
 }
 
-// EventHandlers / Renderers
+// Birthday Functions END
 
+// EventHandlers / Renderers
 function renderHomePage() {
     // creates the HTML elements for the home page
     resetMainDiv();
@@ -241,9 +262,74 @@ function renderPlaylistGeneratorPage() {
 
 }
 
-// Templates
+function renderOnePlaylist(playlist) {
+    //Build Playlist Visual COME BACK TO THIS
 
-const listOfPlaylistsTemplate = () => {
+    let playlistCard = document.createElement('li')
+    playlistCard.className = "results"
+    playlistCard.innerHTML = `
+    <img src="${playlist.imageUrl}">
+    <div class="content">
+        <h4>${playlist.name}</h4>
+        <p>
+            <em>${playlist.description}</em>
+            <b>Playlist Information</b>
+            <b>Creator:</b> ${playlist.creator}
+            <b>Songs & Time:</b> 100 songs, 5 hr 14 min
+        </p>
+    </div>
+    `
+}
+
+function renderPlaylistResultsPage () { //might not need
+    resetMainDiv();
+
+    mainDiv().innerHTML = listOfPlaylistsTemplate();
+}
+
+// Helpers
+function resetMainDiv() {
+    mainDiv().innerHTML = ""
+}
+
+// Globals
+// const baseUrl = 'http://localhost:3000';
+// let playlists = [];
+
+// NODE GETTERS
+const mainDiv = () => document.getElementById("main")
+const viewAllPlaylistsLink = () => document.getElementById("view-all-playlists-link")
+const homePageLink = () => document.getElementById("home-page-link")
+const startGeneratorButton = () => document.getElementById("start-generator-link")
+const generatePlaylistsButton = () => document.getElementById("generate-playlists-link")
+const playlistResultsPage = () => document.getElementById("playlist-results")
+
+// EventListeners
+function attachViewAllPlaylistsClickEvent() {
+    viewAllPlaylistsLink().addEventListener("click", renderViewAllPlaylistsPage)
+}
+
+function attachHomePageClickEvent() {
+    homePageLink().addEventListener("click", renderHomePage)
+}
+
+function attachStartGeneratorClickEvent() {
+    startGeneratorButton().addEventListener("click", renderPlaylistGeneratorPage)
+}
+
+const form = document.getElementById("form");
+
+// DOMContentLoaded
+document.addEventListener("DOMContentLoaded", () => {
+    renderHomePage();
+    attachViewAllPlaylistsClickEvent();
+    attachHomePageClickEvent();
+    attachStartGeneratorClickEvent();
+})
+
+// TEMPLATES
+
+const listOfPlaylistsTemplate = () => { //not being used atm
     return `
     <p style="padding-top: 20px">Your sign is <strong>Sign</strong></p>
 
@@ -276,48 +362,4 @@ const listOfPlaylistsTemplate = () => {
   </table>`
 }
 
-function renderPlaylistResultsPage () {
-    resetMainDiv();
-
-    mainDiv().innerHTML = listOfPlaylistsTemplate();
-}
-
-// Helpers
-function resetMainDiv() {
-    mainDiv().innerHTML = ""
-}
-
-// Globals
-const baseUrl = 'http://localhost:3000';
-let playlists = [];
-
-// NODE GETTERS
-const mainDiv = () => document.getElementById("main")
-const viewAllPlaylistsLink = () => document.getElementById("view-all-playlists-link")
-const homePageLink = () => document.getElementById("home-page-link")
-const startGeneratorButton = () => document.getElementById("start-generator-link")
-const generatePlaylistsButton = () => document.getElementById("generate-playlists-link")
-const playlistResultsPage = () => document.getElementById("playlist-results")
-
-// EventListeners
-function attachViewAllPlaylistsClickEvent() {
-    viewAllPlaylistsLink().addEventListener("click", renderViewAllPlaylistsPage)
-}
-
-function attachHomePageClickEvent() {
-    homePageLink().addEventListener("click", renderHomePage)
-}
-
-function attachStartGeneratorClickEvent() {
-    startGeneratorButton().addEventListener("click", renderPlaylistGeneratorPage)
-}
-
-const form = document.getElementById("form");
-
-// DOMContentLoaded
-document.addEventListener("DOMContentLoaded", () => {
-    renderHomePage();
-    attachViewAllPlaylistsClickEvent();
-    attachHomePageClickEvent();
-    attachStartGeneratorClickEvent();
-})
+// HTML FOR PLAYLIST RESULTS
