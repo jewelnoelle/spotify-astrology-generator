@@ -97,3 +97,68 @@ const piscesPlaylists = [
 // 7 signs have 4 playlists, the other 5 have 3.     
 
 // put array items in alphabetical order(?) >> NO. "sign playlist", "element playlist," "other playlist(s)"
+
+
+const loadPlaylists = (signPlaylist) => {
+
+    signPlaylist.forEach(
+        fetch(baseUrl + playlistId + "?market=US")
+        .then(resp => resp.json())
+    )
+    // THEN: loop (function) through playlist array(s); draft below
+    // .then(data => playlists.forEach(playlistGroup => renderPlaylistGroup(playlistResults)))
+}
+
+// loadPlaylists, then displayResults (NEW)
+
+function displayResults(signPlaylist) {
+    loadPlaylists(signPlaylist);
+    signPlaylist.forEach(formatResults());
+
+}
+
+function formatResults () {
+
+// PLAYLIST RESULTS, HTML.
+
+<div class="row">
+
+  <div class="col s3" style="padding-top: 20px; border: 3px solid pink lighten-4;  border-radius: 8px;">
+    <h5><b>[Playlist Name]</b></h5>
+    <i>[Playlist description.]</i>
+    <br></br>
+    <b>About Playlist:</b>
+    <b>Creator:</b> [Spotify]
+    <b>Why:</b> [explanation]
+  </div>
+
+  <div class="col s3" style="padding-top: 20px; border: 3px solid pink lighten-4;  border-radius: 8px;">
+    <h5><b>[Playlist Name]</b></h5>
+    <i>[Playlist description.]</i>
+    <br></br>
+    <b>About Playlist:</b>
+    <b>Creator:</b> [Spotify]
+    <b>Why:</b> [explanation]
+  </div>
+
+  <div class="col s3" style="padding-top: 20px; border: 3px solid pink lighten-4;  border-radius: 8px;">
+    <h5><b>[Playlist Name]</b></h5>
+    <i>[Playlist description.]</i>
+    <br></br>
+    <b>About Playlist:</b>
+    <b>Creator:</b> [Spotify]
+    <b>Why:</b> [explanation]
+  </div>
+
+  <div class="col s3" style="padding-top: 20px; border: 3px solid pink lighten-4;  border-radius: 8px;">
+    <h5><b>[Playlist Name]</b></h5>
+    <i>[Playlist description.]</i>
+    <br></br>
+    <b>About Playlist:</b>
+    <b>Creator:</b> [Spotify]
+    <b>Why:</b> [explanation]
+  </div>
+  
+  </div>
+}
+
