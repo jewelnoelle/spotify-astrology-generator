@@ -84,20 +84,33 @@ const piscesPlaylists = [
 
 // Fetch Requests
 
-const loadPlaylists = () => {
+// const loadPlaylists = (signPlaylist, index) => {
 
-    fetch(baseUrl + playlistId + "?market=US")
-    .then(resp => resp.json())
-    // THEN: loop (function) through playlist array(s); draft below
-    // .then(data => playlists.forEach(playlistGroup => renderPlaylistGroup(playlistResults)))
-}
+//     let accessToken = "BQBqJlGgIUpG9MoUGfg3xg3Gji6Fa3DdRLHJcqxH1IQ6bdIYv";
 
-// Initial Render
-function initialize() {
-    loadPlaylists();
-}
+//     signPlaylist.forEach(
+//         fetch(baseUrl + signPlaylist[index] + "?market=US", {
+//             method: 'GET', headers: {
+//                 'Accept': 'application/json',
+//                 'Content-Type': 'application/json',
+//                 'Authorization': 'Bearer ' + accessToken
+//             }
+//         })
+//         .then(resp => resp.json())
+//         .then(console.log)
+//     )
+//     // THEN: loop (function) through playlist array(s); draft below
+//     // .then(data => playlists.forEach(playlistGroup => renderPlaylistGroup(playlistResults)))
+// }
 
-initialize();
+// loadPlaylists(ariesPlaylists, 0);
+
+// // Initial Render
+// function initialize() {
+//     renderHomePage();
+// }
+
+// initialize();
 
 // Birthday Functions START
 var userSign;
@@ -176,43 +189,43 @@ let dec = 335;
         if (userBirthday >= 81 && userBirthday <= 110) {
             userSign = "Aries";
             p.innerHTML = `<p>You are an <b>${userSign}</b>! Aries is the first sign of the Zodiac. It is associated with fresh vigor and new beginnings. Individuals born under this sign are said to have an enthusiastic, adventurous, and passionate character. They are usually ambitious, humorous, and pioneering. On the less positive side, they're also said to be prone to selfishness, boastfulness, intolerance, impulsiveness, and impatience.</p>
-            
-            <div class="row">
+  
+  <div class="row">
 
-  <div class="col s3" style="padding-top: 20px; border: 3px solid pink lighten-4;  border-radius: 8px;">
+  <div class="col s3" style="padding-top: 20px;">
     <h5><b>[Playlist Name]</b></h5>
     <i>[Playlist description.]</i>
-    <br></br>
-    <b>About Playlist:</b>
-    <b>Creator:</b> [Spotify]
-    <b>Why:</b> [explanation]
+    <br>
+    <p><b>About Playlist:</b> <br>
+    <b>Creator:</b> [Spotify]<br>
+    <b>Why:</b> [explanation]</p>
   </div>
 
-  <div class="col s3" style="padding-top: 20px; border: 3px solid pink lighten-4;  border-radius: 8px;">
+  <div class="col s3" style="padding-top: 20px;">
     <h5><b>[Playlist Name]</b></h5>
     <i>[Playlist description.]</i>
-    <br></br>
-    <b>About Playlist:</b>
-    <b>Creator:</b> [Spotify]
-    <b>Why:</b> [explanation]
+    <br>
+    <p><b>About Playlist:</b> <br>
+    <b>Creator:</b> [Spotify]<br>
+    <b>Why:</b> [explanation]</p>
   </div>
 
-  <div class="col s3" style="padding-top: 20px; border: 3px solid pink lighten-4;  border-radius: 8px;">
+  <div class="col s3" style="padding-top: 20px;">
     <h5><b>[Playlist Name]</b></h5>
     <i>[Playlist description.]</i>
-    <br></br>
-    <b>About Playlist:</b>
-    <b>Creator:</b> [Spotify]
-    <b>Why:</b> [explanation]
+    <br>
+    <p><b>About Playlist:</b> <br>
+    <b>Creator:</b> [Spotify]<br>
+    <b>Why:</b> [explanation]</p>
   </div>
 
-  <div class="col s3" style="padding-top: 20px; border: 3px solid pink lighten-4;  border-radius: 8px;">
+  <div class="col s3" style="padding-top: 20px;">
     <h5><b>[Playlist Name]</b></h5>
     <i>[Playlist description.]</i>
-    <br></br>
-    <b>About Playlist:</b>
-    <b>Creator:</b> [Spotify]
-    <b>Why:</b> [explanation]
+    <br>
+    <p><b>About Playlist:</b> <br>
+    <b>Creator:</b> [Spotify]<br>
+    <b>Why:</b> [explanation]</p>
   </div>
   
   </div>`
@@ -289,13 +302,15 @@ function renderHomePage() {
     // creates the HTML elements for the home page
     resetMainDiv();
 
-    const h2 = document.createElement("h2");
+    const h3 = document.createElement("h3");
     const p = document.createElement("p");
     const a = document.createElement("a");
     
-    h2.innerText = "Find Playlists Based On Your Zodiac"
-    h2.style.padding = "20px"
-    
+    h3.innerText = "Find Playlists Based On Your Zodiac"
+    h3.style.paddingLeft = "20px"
+    h3.style.paddingRight = "20px"
+    h3.style.paddingTop = "20px"
+
     p.innerText = "Input your birthday to receive music suggestions based on your astrological sign!"
     p.style.fontSize = "medium"
     p.style.paddingLeft = "20px"
@@ -313,7 +328,7 @@ function renderHomePage() {
     a.style.boxShadow = "4px 4px 5px #bdbdbd"
     a.style.marginLeft = "20px"
 
-    mainDiv().appendChild(h2);
+    mainDiv().appendChild(h3);
     mainDiv().appendChild(p);
     mainDiv().appendChild(a);
 }
@@ -323,20 +338,22 @@ function renderViewAllPlaylistsPage() {
 
     resetMainDiv();
 
-    const h2 = document.createElement("h2");
+    const h3 = document.createElement("h3");
     // const p = document.createElement("p");
     const ul = document.createElement("ul");
     const li = document.createElement("li");
    
-    h2.innerText = "All Zodiac Playlists"
-    h2.style.padding = "20px"
+    h3.innerText = "All Zodiac Playlists"
+    h3.style.paddingLeft = "20px"
+    h3.style.paddingRight = "20px"
+    h3.style.paddingTop = "20px"
     
     li.innerText = "Official Aries Spotify playlist"
     li.style.paddingLeft = "20px"
 
     ul.appendChild(li);
 
-    mainDiv().appendChild(h2);
+    mainDiv().appendChild(h3);
     mainDiv().appendChild(ul);
 }
 
@@ -345,14 +362,16 @@ function renderPlaylistGeneratorPage() {
 
     resetMainDiv();
 
-    const h2 = document.createElement("h2");
+    const h3 = document.createElement("h3");
     const p = document.createElement("p");
     const input = document.createElement("input");
     const a = document.createElement("a");
     const form = document.createElement("form");
 
-    h2.innerText = "Playlist Generator"
-    h2.style.padding = "20px"
+    h3.innerText = "Playlist Generator"
+    h3.style.paddingLeft = "20px"
+    h3.style.paddingRight = "20px"
+    h3.style.paddingTop = "20px"
 
     p.innerText = "Input your birthday below for your playlist!"
     p.style.paddingLeft = "20px"
@@ -377,7 +396,7 @@ function renderPlaylistGeneratorPage() {
     a.style.marginLeft = "20px"
     a.addEventListener("click", birthdayZodiac)
 
-    mainDiv().appendChild(h2);
+    mainDiv().appendChild(h3);
     mainDiv().appendChild(p);
     mainDiv().appendChild(input);
     mainDiv().appendChild(a);
