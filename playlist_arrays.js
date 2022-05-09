@@ -102,7 +102,7 @@ const piscesPlaylists = [
 const loadPlaylists = (signPlaylist) => {
 
     signPlaylist.forEach(
-        fetch(baseUrl + playlistId + "?market=US")
+        fetch(baseUrl + signPlaylist[index] + "?market=US")
         .then(resp => resp.json())
     )
     // THEN: loop (function) through playlist array(s); draft below
