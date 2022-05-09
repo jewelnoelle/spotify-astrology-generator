@@ -1,14 +1,35 @@
 // Fetch Requests
 
-function getAllPlaylists() {
-    fetch('http://localhost:3000/playlists')
-    .then(res => res.json())
-    .then(playlistData => playlistData.forEach(playlist => renderOnePlaylist(playlist)))
+const loadPlaylists = () => {
+
+    fetch(baseUrl + playlistId + "?market=US")
+    .then(resp => resp.json())
+    // THEN: loop (function) through playlist array(s)
+    // .then(data => playlists.forEach(playlistGroup => renderPlaylistGroup(playlistResults)))
+}
+
+function renderPlaylistGroup(playlist) {
+    //Build Playlist Visual COME BACK TO THIS
+
+    let playlistCard = document.createElement('li')
+    playlistCard.className = "results"
+    playlistCard.innerHTML = `
+    <img src="${playlist.imageUrl}">
+    <div class="content">
+        <h4>${playlist.name}</h4>
+        <p>
+            <em>${playlist.description}</em>
+            <b>Playlist Information</b>
+            <b>Creator:</b> ${playlist.creator}
+            <b>Songs & Time:</b> 100 songs, 5 hr 14 min
+        </p>
+    </div>
+    `
 }
 
 // Initial Render
 function initialize() {
-    getAllPlaylists();
+    loadPlaylists();
 }
 
 initialize();
@@ -262,25 +283,6 @@ function renderPlaylistGeneratorPage() {
 
 }
 
-function renderOnePlaylist(playlist) {
-    //Build Playlist Visual COME BACK TO THIS
-
-    let playlistCard = document.createElement('li')
-    playlistCard.className = "results"
-    playlistCard.innerHTML = `
-    <img src="${playlist.imageUrl}">
-    <div class="content">
-        <h4>${playlist.name}</h4>
-        <p>
-            <em>${playlist.description}</em>
-            <b>Playlist Information</b>
-            <b>Creator:</b> ${playlist.creator}
-            <b>Songs & Time:</b> 100 songs, 5 hr 14 min
-        </p>
-    </div>
-    `
-}
-
 function renderPlaylistResultsPage () { //might not need
     resetMainDiv();
 
@@ -294,6 +296,7 @@ function resetMainDiv() {
 
 // Globals
 const baseUrl = 'https://api.spotify.com/v1/playlists/';
+var playlistId;
 let playlists = {
     "AriesList": ["37i9dQZF1DX2DC3Q7JOmYe", "37i9dQZF1DX66m4icL86Ru"],
     "TaurusList": [],
@@ -318,12 +321,6 @@ const generatePlaylistsButton = () => document.getElementById("generate-playlist
 const playlistResultsPage = () => document.getElementById("playlist-results")
 
 // EventListeners
-
-const loadPlaylists = () => {
-    fetch(baseUrl + playlistId + "?market=US")
-}
-
-//
 
 function attachViewAllPlaylistsClickEvent() {
     viewAllPlaylistsLink().addEventListener("click", renderViewAllPlaylistsPage)
