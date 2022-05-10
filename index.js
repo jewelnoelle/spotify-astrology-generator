@@ -280,7 +280,6 @@ let dec = 335;
         }
 
         let pDiv = document.getElementById("sign-result")
-        debugger
         if (pDiv) {
             pDiv.remove();
         }
