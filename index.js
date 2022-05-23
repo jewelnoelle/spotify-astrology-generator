@@ -99,8 +99,6 @@ const piscesPlaylists = [
 //         .then(resp => resp.json())
 //         .then(console.log)
 //     )
-//     // THEN: loop (function) through playlist array(s); draft below
-//     // .then(data => playlists.forEach(playlistGroup => renderPlaylistGroup(playlistResults)))
 // }
 
 // loadPlaylists(ariesPlaylists, 0);
@@ -332,7 +330,7 @@ function renderHomePage() {
     mainDiv().appendChild(a);
 }
 
-function renderViewAllPlaylistsPage() {
+function renderViewAllPlaylistsPage() { // COME BACK TO...
     // creates the HTML elements for the "View All Playlists" page
 
     resetMainDiv();
