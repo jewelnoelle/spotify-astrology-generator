@@ -664,30 +664,6 @@ function renderHomePage() {
     mainDiv().appendChild(a);
 }
 
-function renderViewAllPlaylistsPage() { // COME BACK TO...
-    // creates the HTML elements for the "View All Playlists" page
-
-    resetMainDiv();
-
-    const h3 = document.createElement("h3");
-    // const p = document.createElement("p");
-    const ul = document.createElement("ul");
-    const li = document.createElement("li");
-   
-    h3.innerText = "All Zodiac Playlists"
-    h3.style.paddingLeft = "20px"
-    h3.style.paddingRight = "20px"
-    h3.style.paddingTop = "20px"
-    
-    li.innerText = "Official Aries Spotify playlist"
-    li.style.paddingLeft = "20px"
-
-    ul.appendChild(li);
-
-    mainDiv().appendChild(h3);
-    mainDiv().appendChild(ul);
-}
-
 function renderPlaylistGeneratorPage() {
     // creates the HTML elements for the "Playlist Generator" page
 
@@ -751,17 +727,12 @@ function resetMainDiv() {
 
 // NODE GETTERS
 const mainDiv = () => document.getElementById("main")
-const viewAllPlaylistsLink = () => document.getElementById("view-all-playlists-link")
 const homePageLink = () => document.getElementById("home-page-link")
 const startGeneratorButton = () => document.getElementById("start-generator-link")
 const generatePlaylistsButton = () => document.getElementById("generate-playlists-link")
 const playlistResultsPage = () => document.getElementById("playlist-results")
 
 // EventListeners
-
-function attachViewAllPlaylistsClickEvent() {
-    viewAllPlaylistsLink().addEventListener("click", renderViewAllPlaylistsPage)
-}
 
 function attachHomePageClickEvent() {
     homePageLink().addEventListener("click", renderHomePage)
@@ -776,7 +747,6 @@ const form = document.getElementById("form");
 // DOMContentLoaded
 document.addEventListener("DOMContentLoaded", () => {
     renderHomePage();
-    attachViewAllPlaylistsClickEvent();
     attachHomePageClickEvent();
     attachStartGeneratorClickEvent();
 })
