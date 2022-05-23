@@ -1,114 +1,91 @@
-// Globals
-const baseUrl = 'https://api.spotify.com/v1/playlists/';
-var playlistId;
+// // PLAYLIST ARRAYS;
+// const ariesPlaylists = [
+//     "37i9dQZF1DX2DC3Q7JOmYe", // Aries
+//     "37i9dQZF1DX66m4icL86Ru", // BBE
+//     "37i9dQZF1DWW46Vfs1oltB", // K-Hip-Hop +82
+//     "37i9dQZF1DWWvmOXYvR5a6" // TrenChill K-Hip-Hop
+// ]
 
-// PLAYLIST ARRAYS;
-const ariesPlaylists = [
-    "37i9dQZF1DX2DC3Q7JOmYe", // Aries
-    "37i9dQZF1DX66m4icL86Ru", // BBE
-    "37i9dQZF1DWW46Vfs1oltB", // K-Hip-Hop +82
-    "37i9dQZF1DWWvmOXYvR5a6" // TrenChill K-Hip-Hop
-]
+// const taurusPlaylists = [
+//     "37i9dQZF1DXbCgDGG5xQtb", // Taurus
+//     "37i9dQZF1DWTDafB3skWPN", // Feeling Accomplished
+//     "37i9dQZF1DX1OY2Lp0bIPp", // Monday Motivation
+//     "37i9dQZF1DXcxacyAXkQDu" // Cozy Blend
+// ]
 
-const taurusPlaylists = [
-    "37i9dQZF1DXbCgDGG5xQtb", // Taurus
-    "37i9dQZF1DWTDafB3skWPN", // Feeling Accomplished
-    "37i9dQZF1DX1OY2Lp0bIPp", // Monday Motivation
-    "37i9dQZF1DXcxacyAXkQDu" // Cozy Blend
-]
+// const geminiPlaylists = [
+//     "37i9dQZF1DWWVULl5wUsL9", // Gemini
+//     "37i9dQZF1DX6GwdWRQMQpq", // Feelin' Myself
+//     "37i9dQZF1DWSnRSDTCsoPk", // Energy Booster: K-Pop
+// ]
 
-const geminiPlaylists = [
-    "37i9dQZF1DWWVULl5wUsL9", // Gemini
-    "37i9dQZF1DX6GwdWRQMQpq", // Feelin' Myself
-    "37i9dQZF1DWSnRSDTCsoPk", // Energy Booster: K-Pop
-]
+// const cancerPlaylists = [
+//     "37i9dQZF1DXaeX3MJpiD4U", // Cancer
+//     "37i9dQZF1DX7rOY2tZUw1k", // Timeless Love Songs
+//     "37i9dQZF1DWVIzZt2GAU4X", // Piano Ballads
+// ]
 
-const cancerPlaylists = [
-    "37i9dQZF1DXaeX3MJpiD4U", // Cancer
-    "37i9dQZF1DX7rOY2tZUw1k", // Timeless Love Songs
-    "37i9dQZF1DWVIzZt2GAU4X", // Piano Ballads
-]
+// const leoPlaylists = [
+//     "37i9dQZF1DX7cvHpkIJFt2", // Leo
+//     "37i9dQZF1DX4fpCWaHOned", // Confidence Boost
+//     "37i9dQZF1DX66m4icL86Ru", // BBE
+//     "37i9dQZF1DWW46Vfs1oltB" // K-Hip-Hop +82
+// ]
 
-const leoPlaylists = [
-    "37i9dQZF1DX7cvHpkIJFt2", // Leo
-    "37i9dQZF1DX4fpCWaHOned", // Confidence Boost
-    "37i9dQZF1DX66m4icL86Ru", // BBE
-    "37i9dQZF1DWW46Vfs1oltB" // K-Hip-Hop +82
-]
+// const virgoPlaylists = [
+//     "37i9dQZF1DX6PdsVYbP4rI", // Virgo
+//     "37i9dQZF1DWSnRSDTCsoPk", // Feeling Accomplished
+//     "37i9dQZF1DXdxcBWuJkbcy", // Motivation Mix
+// ]
 
-const virgoPlaylists = [
-    "37i9dQZF1DX6PdsVYbP4rI", // Virgo
-    "37i9dQZF1DWSnRSDTCsoPk", // Feeling Accomplished
-    "37i9dQZF1DXdxcBWuJkbcy", // Motivation Mix
-]
+// const libraPlaylists = [
+//     "37i9dQZF1DXco4NYQOMLiT", // Libra
+//     "37i9dQZF1DX6GwdWRQMQpq", // Feelin' Myself
+//     "37i9dQZF1DWSnRSDTCsoPk", // Energy Booster: K-Pop
+// ]
 
-const libraPlaylists = [
-    "37i9dQZF1DXco4NYQOMLiT", // Libra
-    "37i9dQZF1DX6GwdWRQMQpq", // Feelin' Myself
-    "37i9dQZF1DWSnRSDTCsoPk", // Energy Booster: K-Pop
-]
+// const scorpioPlaylists = [
+//     "37i9dQZF1DX0YZgrwmizcR", // Scorpio
+//     "37i9dQZF1DX3xgbKZSVZNH", // Power Ballads
+//     "37i9dQZF1DWVIzZt2GAU4X", // Piano Ballads
+//     "37i9dQZF1DX4SBhb3fqCJd" // Are & Be
+// ]
 
-const scorpioPlaylists = [
-    "37i9dQZF1DX0YZgrwmizcR", // Scorpio
-    "37i9dQZF1DX3xgbKZSVZNH", // Power Ballads
-    "37i9dQZF1DWVIzZt2GAU4X", // Piano Ballads
-    "37i9dQZF1DX4SBhb3fqCJd" // Are & Be
-]
+// const sagittariusPlaylists = [
+//     "37i9dQZF1DX93MXPufCcuk", // Sagittarius
+//     "37i9dQZF1DWW46Vfs1oltB", // K-Hip-Hop +82
+//     "37i9dQZF1DX8C585qnMYHP", // Fresh Finds Experimental
+// ]
 
-const sagittariusPlaylists = [
-    "37i9dQZF1DX93MXPufCcuk", // Sagittarius
-    "37i9dQZF1DWW46Vfs1oltB", // K-Hip-Hop +82
-    "37i9dQZF1DX8C585qnMYHP", // Fresh Finds Experimental
-]
+// const capricornPlaylists = [
+//     "37i9dQZF1DX2rcqmLx0nK4", // Capricorn
+//     "37i9dQZF1DWTDafB3skWPN", // Feeling Accomplished
+//     "37i9dQZF1DXbmCTvLQy5AO", // Work It, Own It
+//     "37i9dQZF1DXc5e2bJhV6pu" // Morning Motivation
+// ]
 
-const capricornPlaylists = [
-    "37i9dQZF1DX2rcqmLx0nK4", // Capricorn
-    "37i9dQZF1DWTDafB3skWPN", // Feeling Accomplished
-    "37i9dQZF1DXbmCTvLQy5AO", // Work It, Own It
-    "37i9dQZF1DXc5e2bJhV6pu" // Morning Motivation
-]
+// const aquariusPlaylists = [
+//     "37i9dQZF1DX7F9VDRJOFhw", // Aquarius
+//     "37i9dQZF1DX8C585qnMYHP", // Fresh Finds Experimental
+//     "37i9dQZF1DWSnRSDTCsoPk", // Energy Booster: K-Pop
+//     "37i9dQZF1DWTggY0yqBxES" // Alternative Hip-Hop
+// ]
 
-const aquariusPlaylists = [
-    "37i9dQZF1DX7F9VDRJOFhw", // Aquarius
-    "37i9dQZF1DX8C585qnMYHP", // Fresh Finds Experimental
-    "37i9dQZF1DWSnRSDTCsoPk", // Energy Booster: K-Pop
-    "37i9dQZF1DWTggY0yqBxES" // Alternative Hip-Hop
-]
-
-const piscesPlaylists = [
-    "37i9dQZF1DWX0EDWtabVRv", // Pisces
-    "37i9dQZF1DWSiZVO2J6WeI", // Dreamy Vibes
-    "37i9dQZF1DWVIzZt2GAU4X", // Piano Ballads
-    "37i9dQZF1DX56qfiUZBncF" // Creativity Boost
-]
+// const piscesPlaylists = [
+//     "37i9dQZF1DWX0EDWtabVRv", // Pisces
+//     "37i9dQZF1DWSiZVO2J6WeI", // Dreamy Vibes
+//     "37i9dQZF1DWVIzZt2GAU4X", // Piano Ballads
+//     "37i9dQZF1DX56qfiUZBncF" // Creativity Boost
+// ]
 
 // Fetch Requests
+const playlists = []
 
-// const loadPlaylists = (signPlaylist, index) => {
-
-//     let accessToken = "BQBqJlGgIUpG9MoUGfg3xg3Gji6Fa3DdRLHJcqxH1IQ6bdIYv";
-
-//     signPlaylist.forEach(
-//         fetch(baseUrl + signPlaylist[index] + "?market=US", {
-//             method: 'GET', headers: {
-//                 'Accept': 'application/json',
-//                 'Content-Type': 'application/json',
-//                 'Authorization': 'Bearer ' + accessToken
-//             }
-//         })
-//         .then(resp => resp.json())
-//         .then(console.log)
-//     )
-// }
-
-// loadPlaylists(ariesPlaylists, 0);
-
-// // Initial Render
-// function initialize() {
-//     renderHomePage();
-// }
-
-// initialize();
+const loadPlaylists = () => {
+    fetch("http://localhost:3000/playlists")
+    .then(resp => resp.json())
+    .then(data => playlists.push(data))
+}
 
 // Birthday Functions START
 var userSign;
@@ -191,39 +168,35 @@ let dec = 335;
   <div class="row">
 
   <div class="col s3" style="padding-top: 20px;">
-    <h5><b>[Playlist Name]</b></h5>
-    <i>[Playlist description.]</i>
+    <h5><b>${playlists[0][0]['Aries'][0]["name"]}</b></h5>
+    <i>${playlists[0][0]['Aries'][0]["description"]}</i>
     <br>
-    <p><b>About Playlist:</b> <br>
-    <b>Creator:</b> [Spotify]<br>
-    <b>Why:</b> [explanation]</p>
+    <b>Creator:</b> Spotify<br>
+    <a href="${playlists[0][0]['Aries'][0]["link"]}">(link to playlist)</a></p>
   </div>
 
   <div class="col s3" style="padding-top: 20px;">
-    <h5><b>[Playlist Name]</b></h5>
-    <i>[Playlist description.]</i>
+    <h5><b>${playlists[0][0]['Aries'][1]["name"]}</b></h5>
+    <i>${playlists[0][0]['Aries'][1]["description"]}</i>
     <br>
-    <p><b>About Playlist:</b> <br>
-    <b>Creator:</b> [Spotify]<br>
-    <b>Why:</b> [explanation]</p>
-  </div>
+    <b>Creator:</b> Spotify<br>
+    <a href="${playlists[0][0]['Aries'][1]["link"]}">(link to playlist)</a></p>
+ </div>
 
-  <div class="col s3" style="padding-top: 20px;">
-    <h5><b>[Playlist Name]</b></h5>
-    <i>[Playlist description.]</i>
-    <br>
-    <p><b>About Playlist:</b> <br>
-    <b>Creator:</b> [Spotify]<br>
-    <b>Why:</b> [explanation]</p>
-  </div>
+ <div class="col s3" style="padding-top: 20px;">
+ <h5><b>${playlists[0][0]['Aries'][2]["name"]}</b></h5>
+ <i>${playlists[0][0]['Aries'][2]["description"]}</i>
+ <br>
+ <b>Creator:</b> Spotify<br>
+ <a href="${playlists[0][0]['Aries'][2]["link"]}">(link to playlist)</a></p>
+</div>
 
-  <div class="col s3" style="padding-top: 20px;">
-    <h5><b>[Playlist Name]</b></h5>
-    <i>[Playlist description.]</i>
+<div class="col s3" style="padding-top: 20px;">
+    <h5><b>${playlists[0][0]['Aries'][3]["name"]}</b></h5>
+    <i>${playlists[0][0]['Aries'][3]["description"]}</i>
     <br>
-    <p><b>About Playlist:</b> <br>
-    <b>Creator:</b> [Spotify]<br>
-    <b>Why:</b> [explanation]</p>
+    <b>Creator:</b> Spotify<br>
+    <a href="${playlists[0][0]['Aries'][3]["link"]}">(link to playlist)</a></p>
   </div>
   
   </div>`
@@ -231,47 +204,408 @@ let dec = 335;
         }
         else if (userBirthday >= 111 && userBirthday <= 141) {
             userSign = "Taurus";
-            p.innerHTML = `<p>You are a <b>${userSign}</b>! Taurus is the second sign of the Zodiac and is associated with material pleasure. Individuals born under this sign are thought to have a calm, patient, reliable, loyal, affectionate, sensuous, ambitious, and determined character. They are also prone to hedonism, laziness, inflexibility, jealousy, and antipathy.</p>`
+            p.innerHTML = `<p>You are a <b>${userSign}</b>! Taurus is the second sign of the Zodiac and is associated with material pleasure. Individuals born under this sign are thought to have a calm, patient, reliable, loyal, affectionate, sensuous, ambitious, and determined character. They are also prone to hedonism, laziness, inflexibility, jealousy, and antipathy.</p>
+            
+            <div class="row">
+
+            <div class="col s3" style="padding-top: 20px;">
+              <h5><b>${playlists[0][0]['Taurus'][0]["name"]}</b></h5>
+              <i>${playlists[0][0]['Taurus'][0]["description"]}</i>
+              <br>
+              <b>Creator:</b> Spotify<br>
+              <a href="${playlists[0][0]['Taurus'][0]["link"]}">(link to playlist)</a></p>
+            </div>
+          
+            <div class="col s3" style="padding-top: 20px;">
+              <h5><b>${playlists[0][0]['Taurus'][1]["name"]}</b></h5>
+              <i>${playlists[0][0]['Taurus'][1]["description"]}</i>
+              <br>
+              <b>Creator:</b> Spotify<br>
+              <a href="${playlists[0][0]['Taurus'][1]["link"]}">(link to playlist)</a></p>
+           </div>
+          
+           <div class="col s3" style="padding-top: 20px;">
+           <h5><b>${playlists[0][0]['Taurus'][2]["name"]}</b></h5>
+           <i>${playlists[0][0]['Taurus'][2]["description"]}</i>
+           <br>
+           <b>Creator:</b> Spotify<br>
+           <a href="${playlists[0][0]['Taurus'][2]["link"]}">(link to playlist)</a></p>
+          </div>
+          
+          <div class="col s3" style="padding-top: 20px;">
+              <h5><b>${playlists[0][0]['Taurus'][3]["name"]}</b></h5>
+              <i>${playlists[0][0]['Taurus'][3]["description"]}</i>
+              <br>
+              <b>Creator:</b> Spotify<br>
+              <a href="${playlists[0][0]['Taurus'][3]["link"]}">(link to playlist)</a></p>
+            </div>
+            
+            </div>`
         }
         else if (userBirthday >= 142 && userBirthday <= 172) {
             userSign = "Gemini";
-            p.innerHTML = `<p>You are a <b>${userSign}</b>! Gemini is the third sign of the Zodiac and is associated with youth and versatility. Individuals born under this sign are thought to have a sociable, fun-loving, versatile, lively, communicative, liberal, intelligent, mentally active, and friendly character. They are also thought to be prone to moodiness, inconsistency, superficiality, restlessness, and laziness.</p>`
+            p.innerHTML = `<p>You are a <b>${userSign}</b>! Gemini is the third sign of the Zodiac and is associated with youth and versatility. Individuals born under this sign are thought to have a sociable, fun-loving, versatile, lively, communicative, liberal, intelligent, mentally active, and friendly character. They are also thought to be prone to moodiness, inconsistency, superficiality, restlessness, and laziness.</p>
+            
+            <div class="row">
+
+            <div class="col s4" style="padding-top: 20px;">
+              <h5><b>${playlists[0][0]['Gemini'][0]["name"]}</b></h5>
+              <i>${playlists[0][0]['Gemini'][0]["description"]}</i>
+              <br>
+              <b>Creator:</b> Spotify<br>
+              <a href="${playlists[0][0]['Gemini'][0]["link"]}">(link to playlist)</a></p>
+            </div>
+            
+            <div class="col s4" style="padding-top: 20px;">
+              <h5><b>${playlists[0][0]['Gemini'][1]["name"]}</b></h5>
+              <i>${playlists[0][0]['Gemini'][1]["description"]}</i>
+              <br>
+              <b>Creator:</b> Spotify<br>
+              <a href="${playlists[0][0]['Gemini'][1]["link"]}">(link to playlist)</a></p>
+            </div>
+            
+            <div class="col s4" style="padding-top: 20px;">
+            <h5><b>${playlists[0][0]['Gemini'][2]["name"]}</b></h5>
+            <i>${playlists[0][0]['Gemini'][2]["description"]}</i>
+            <br>
+            <b>Creator:</b> Spotify<br>
+            <a href="${playlists[0][0]['Gemini'][2]["link"]}">(link to playlist)</a></p>
+            </div>
+            
+            
+            </div>`
         }
         else if (userBirthday >= 173 && userBirthday <= 204) {
             userSign = "Cancer";
-            p.innerHTML = `<p>You are a <b>${userSign}</b>! Cancer is the fourth sign of the Zodiac. It is associated with family and domesticity. Individuals born under this sign are thought to have a kind, emotional, romantic, imaginative, sympathetic, nurturing, and intuitive character. They are also supposed to be prone to changeability, moodiness, hypersensitivity, depression, and clingy behavior.</p>`
+            p.innerHTML = `<p>You are a <b>${userSign}</b>! Cancer is the fourth sign of the Zodiac. It is associated with family and domesticity. Individuals born under this sign are thought to have a kind, emotional, romantic, imaginative, sympathetic, nurturing, and intuitive character. They are also supposed to be prone to changeability, moodiness, hypersensitivity, depression, and clingy behavior.</p>
+
+            <div class="row">
+
+            <div class="col s4" style="padding-top: 20px;">
+              <h5><b>${playlists[0][0]['Cancer'][0]["name"]}</b></h5>
+              <i>${playlists[0][0]['Cancer'][0]["description"]}</i>
+              <br>
+              <b>Creator:</b> Spotify<br>
+              <a href="${playlists[0][0]['Cancer'][0]["link"]}">(link to playlist)</a></p>
+            </div>
+            
+            <div class="col s4" style="padding-top: 20px;">
+              <h5><b>${playlists[0][0]['Cancer'][1]["name"]}</b></h5>
+              <i>${playlists[0][0]['Cancer'][1]["description"]}</i>
+              <br>
+              <b>Creator:</b> Spotify<br>
+              <a href="${playlists[0][0]['Cancer'][1]["link"]}">(link to playlist)</a></p>
+            </div>
+            
+            <div class="col s4" style="padding-top: 20px;">
+            <h5><b>${playlists[0][0]['Cancer'][2]["name"]}</b></h5>
+            <i>${playlists[0][0]['Cancer'][2]["description"]}</i>
+            <br>
+            <b>Creator:</b> Spotify<br>
+            <a href="${playlists[0][0]['Cancer'][2]["link"]}">(link to playlist)</a></p>
+            </div>
+            
+            
+            </div>`
         }
         else if (userBirthday >= 205 && userBirthday <= 235) {
             userSign = "Leo";
-            p.innerHTML = `<p>You are a <b>${userSign}</b>! Leo is the fifth sign of the Zodiac and is associated with the keywords magnanimous, generous, hospitable, caring, warm, authoritative, active, and open. Leos are typically pictured as very dignified and regal. They are hard-working, ambitious, and enthusiastic, however, they are supposedly prone to laziness, often choosing to take "the easy way out." They are known to be exuberant, extroverted, and generous. They have a natural dramatic flair and are very creative. They are typically very self-assured and love taking center-stage in whatever arena they are in.</p>`
+            p.innerHTML = `<p>You are a <b>${userSign}</b>! Leo is the fifth sign of the Zodiac and is associated with the keywords magnanimous, generous, hospitable, caring, warm, authoritative, active, and open. Leos are typically pictured as very dignified and regal. They are hard-working, ambitious, and enthusiastic, however, they are supposedly prone to laziness, often choosing to take "the easy way out." They are known to be exuberant, extroverted, and generous. They have a natural dramatic flair and are very creative. They are typically very self-assured and love taking center-stage in whatever arena they are in.</p>
+            
+            <div class="row">
+
+            <div class="col s3" style="padding-top: 20px;">
+              <h5><b>${playlists[0][0]['Leo'][0]["name"]}</b></h5>
+              <i>${playlists[0][0]['Leo'][0]["description"]}</i>
+              <br>
+              <b>Creator:</b> Spotify<br>
+              <a href="${playlists[0][0]['Leo'][0]["link"]}">(link to playlist)</a></p>
+            </div>
+            
+            <div class="col s3" style="padding-top: 20px;">
+              <h5><b>${playlists[0][0]['Leo'][1]["name"]}</b></h5>
+              <i>${playlists[0][0]['Leo'][1]["description"]}</i>
+              <br>
+              <b>Creator:</b> Spotify<br>
+              <a href="${playlists[0][0]['Leo'][1]["link"]}">(link to playlist)</a></p>
+            </div>
+            
+            <div class="col s3" style="padding-top: 20px;">
+            <h5><b>${playlists[0][0]['Leo'][2]["name"]}</b></h5>
+            <i>${playlists[0][0]['Leo'][2]["description"]}</i>
+            <br>
+            <b>Creator:</b> Spotify<br>
+            <a href="${playlists[0][0]['Leo'][2]["link"]}">(link to playlist)</a></p>
+            </div>
+            
+            <div class="col s3" style="padding-top: 20px;">
+              <h5><b>${playlists[0][0]['Leo'][3]["name"]}</b></h5>
+              <i>${playlists[0][0]['Leo'][3]["description"]}</i>
+              <br>
+              <b>Creator:</b> Spotify<br>
+              <a href="${playlists[0][0]['Leo'][3]["link"]}">(link to playlist)</a></p>
+            </div>
+            
+            </div>`
         }
         else if (userBirthday >= 236 && userBirthday <= 266) {
             userSign = "Virgo";
-            p.innerHTML = `<p>You are a <b>${userSign}</b>! Virgo is the sixth sign of the Zodiac. It is associated with purity and service. Individuals born under this sign are thought to have a diligent, analytical, self-sufficient, controlled, orderly, and modest character. But they are also prone to fussiness, perfectionism, harsh criticism, coldness, and hypochondria.</p>`
+            p.innerHTML = `<p>You are a <b>${userSign}</b>! Virgo is the sixth sign of the Zodiac. It is associated with purity and service. Individuals born under this sign are thought to have a diligent, analytical, self-sufficient, controlled, orderly, and modest character. But they are also prone to fussiness, perfectionism, harsh criticism, coldness, and hypochondria.</p>
+            
+            <div class="row">
+
+            <div class="col s4" style="padding-top: 20px;">
+              <h5><b>${playlists[0][0]['Virgo'][0]["name"]}</b></h5>
+              <i>${playlists[0][0]['Virgo'][0]["description"]}</i>
+              <br>
+              <b>Creator:</b> Spotify<br>
+              <a href="${playlists[0][0]['Virgo'][0]["link"]}">(link to playlist)</a></p>
+            </div>
+            
+            <div class="col s4" style="padding-top: 20px;">
+              <h5><b>${playlists[0][0]['Virgo'][1]["name"]}</b></h5>
+              <i>${playlists[0][0]['Virgo'][1]["description"]}</i>
+              <br>
+              <b>Creator:</b> Spotify<br>
+              <a href="${playlists[0][0]['Virgo'][1]["link"]}">(link to playlist)</a></p>
+            </div>
+            
+            <div class="col s4" style="padding-top: 20px;">
+            <h5><b>${playlists[0][0]['Virgo'][2]["name"]}</b></h5>
+            <i>${playlists[0][0]['Virgo'][2]["description"]}</i>
+            <br>
+            <b>Creator:</b> Spotify<br>
+            <a href="${playlists[0][0]['Virgo'][2]["link"]}">(link to playlist)</a></p>
+            </div>
+            
+            
+            </div>`
         }
         else if (userBirthday >= 267 && userBirthday <= 296) {
             userSign = "Libra";
-            p.innerHTML = `<p>You are a <b>${userSign}</b>! Libra is the seventh sign of the Zodiac. It is associated with justice. Individuals born under this sign are thought to have a pleasant, articulate, charming, social, charismatic character. They are artistic. But they also possess a fair, refined, diplomatic, even-tempered and self-sufficient character. On the negative side, they are thought to be indecisive, lazy, aloof, flirtatious, and shallow. They are also supposedly extravagant, frivolous, impatient, envious, and quarrelsome.</p>`
+            p.innerHTML = `<p>You are a <b>${userSign}</b>! Libra is the seventh sign of the Zodiac. It is associated with justice. Individuals born under this sign are thought to have a pleasant, articulate, charming, social, charismatic character. They are artistic. But they also possess a fair, refined, diplomatic, even-tempered and self-sufficient character. On the negative side, they are thought to be indecisive, lazy, aloof, flirtatious, and shallow. They are also supposedly extravagant, frivolous, impatient, envious, and quarrelsome.</p>
+            
+            <div class="row">
+
+            <div class="col s4" style="padding-top: 20px;">
+              <h5><b>${playlists[0][0]['Libra'][0]["name"]}</b></h5>
+              <i>${playlists[0][0]['Libra'][0]["description"]}</i>
+              <br>
+              <b>Creator:</b> Spotify<br>
+              <a href="${playlists[0][0]['Libra'][0]["link"]}">(link to playlist)</a></p>
+            </div>
+            
+            <div class="col s4" style="padding-top: 20px;">
+              <h5><b>${playlists[0][0]['Libra'][1]["name"]}</b></h5>
+              <i>${playlists[0][0]['Libra'][1]["description"]}</i>
+              <br>
+              <b>Creator:</b> Spotify<br>
+              <a href="${playlists[0][0]['Libra'][1]["link"]}">(link to playlist)</a></p>
+            </div>
+            
+            <div class="col s4" style="padding-top: 20px;">
+            <h5><b>${playlists[0][0]['Libra'][2]["name"]}</b></h5>
+            <i>${playlists[0][0]['Libra'][2]["description"]}</i>
+            <br>
+            <b>Creator:</b> Spotify<br>
+            <a href="${playlists[0][0]['Libra'][2]["link"]}">(link to playlist)</a></p>
+            </div>
+            
+            
+            </div>`
         }
         else if (userBirthday >= 297 && userBirthday <= 326) {
             userSign = "Scorpio";
-            p.innerHTML = `<p>You are a <b>${userSign}</b>! Scorpio is the eighth sign of the Zodiac. It is associated with intensity, passion, and power. Individuals born under this sign are thought to have a complex, analytical, patient, keenly perceptive, inquisitive, focused, determined, hypnotic, and self-contained character. They are also prone to extremity, jealousy, envy, secretiveness, possessiveness, cruelty, and cunning.</p>`
+            p.innerHTML = `<p>You are a <b>${userSign}</b>! Scorpio is the eighth sign of the Zodiac. It is associated with intensity, passion, and power. Individuals born under this sign are thought to have a complex, analytical, patient, keenly perceptive, inquisitive, focused, determined, hypnotic, and self-contained character. They are also prone to extremity, jealousy, envy, secretiveness, possessiveness, cruelty, and cunning.</p>
+            
+            <div class="row">
+
+            <div class="col s3" style="padding-top: 20px;">
+              <h5><b>${playlists[0][0]['Scorpio'][0]["name"]}</b></h5>
+              <i>${playlists[0][0]['Scorpio'][0]["description"]}</i>
+              <br>
+              <b>Creator:</b> Spotify<br>
+              <a href="${playlists[0][0]['Scorpio'][0]["link"]}">(link to playlist)</a></p>
+            </div>
+            
+            <div class="col s3" style="padding-top: 20px;">
+              <h5><b>${playlists[0][0]['Scorpio'][1]["name"]}</b></h5>
+              <i>${playlists[0][0]['Scorpio'][1]["description"]}</i>
+              <br>
+              <b>Creator:</b> Spotify<br>
+              <a href="${playlists[0][0]['Scorpio'][1]["link"]}">(link to playlist)</a></p>
+            </div>
+            
+            <div class="col s3" style="padding-top: 20px;">
+            <h5><b>${playlists[0][0]['Scorpio'][2]["name"]}</b></h5>
+            <i>${playlists[0][0]['Scorpio'][2]["description"]}</i>
+            <br>
+            <b>Creator:</b> Spotify<br>
+            <a href="${playlists[0][0]['Scorpio'][2]["link"]}">(link to playlist)</a></p>
+            </div>
+            
+            <div class="col s3" style="padding-top: 20px;">
+              <h5><b>${playlists[0][0]['Scorpio'][3]["name"]}</b></h5>
+              <i>${playlists[0][0]['Scorpio'][3]["description"]}</i>
+              <br>
+              <b>Creator:</b> Spotify<br>
+              <a href="${playlists[0][0]['Scorpio'][3]["link"]}">(link to playlist)</a></p>
+            </div>
+            
+            </div>`
         }
         else if (userBirthday >= 327 && userBirthday <= 356) {
             userSign = "Sagittarius";
-            p.innerHTML = `<p>You are a <b>${userSign}</b>! Sagittarius is the ninth sign of the Zodiac. It is associated with travel and expansion. Individuals born under this sign are thought to have a straight-forward, dynamic, highly intelligent, extremely clever, ethical, humorous, generous, open-hearted, compassionate, and energetic character. They are also prone to restlessness, impulsiveness, impatience, and recklessness.</p>`
+            p.innerHTML = `<p>You are a <b>${userSign}</b>! Sagittarius is the ninth sign of the Zodiac. It is associated with travel and expansion. Individuals born under this sign are thought to have a straight-forward, dynamic, highly intelligent, extremely clever, ethical, humorous, generous, open-hearted, compassionate, and energetic character. They are also prone to restlessness, impulsiveness, impatience, and recklessness.</p>
+            
+            <div class="row">
+
+            <div class="col s4" style="padding-top: 20px;">
+              <h5><b>${playlists[0][0]['Sagittarius'][0]["name"]}</b></h5>
+              <i>${playlists[0][0]['Sagittarius'][0]["description"]}</i>
+              <br>
+              <b>Creator:</b> Spotify<br>
+              <a href="${playlists[0][0]['Sagittarius'][0]["link"]}">(link to playlist)</a></p>
+            </div>
+            
+            <div class="col s4" style="padding-top: 20px;">
+              <h5><b>${playlists[0][0]['Sagittarius'][1]["name"]}</b></h5>
+              <i>${playlists[0][0]['Sagittarius'][1]["description"]}</i>
+              <br>
+              <b>Creator:</b> Spotify<br>
+              <a href="${playlists[0][0]['Sagittarius'][1]["link"]}">(link to playlist)</a></p>
+            </div>
+            
+            <div class="col s4" style="padding-top: 20px;">
+            <h5><b>${playlists[0][0]['Sagittarius'][2]["name"]}</b></h5>
+            <i>${playlists[0][0]['Sagittarius'][2]["description"]}</i>
+            <br>
+            <b>Creator:</b> Spotify<br>
+            <a href="${playlists[0][0]['Sagittarius'][2]["link"]}">(link to playlist)</a></p>
+            </div>
+            
+            
+            </div>`
         }
         else if (userBirthday >= 357 && userBirthday <= 366 || userBirthday >= 1 && userBirthday <= 19) {
             userSign = "Capricorn";
-            p.innerHTML = `<p>You are a <b>${userSign}</b>! Capricorn is the 10th sign of the Zodiac and is associated with hard work and business affairs. Individuals born under this sign are thought to have an ambitious, modest, patient, responsible, stable, trustworthy, powerful, intellectual, perspicacious, and persistent character. They are also prone to coldness, conservatism, rigidity, materialism, and dullness.</p>`
+            p.innerHTML = `<p>You are a <b>${userSign}</b>! Capricorn is the 10th sign of the Zodiac and is associated with hard work and business affairs. Individuals born under this sign are thought to have an ambitious, modest, patient, responsible, stable, trustworthy, powerful, intellectual, perspicacious, and persistent character. They are also prone to coldness, conservatism, rigidity, materialism, and dullness.</p>
+            
+            <div class="row">
+
+            <div class="col s3" style="padding-top: 20px;">
+              <h5><b>${playlists[0][0]['Capricorn'][0]["name"]}</b></h5>
+              <i>${playlists[0][0]['Capricorn'][0]["description"]}</i>
+              <br>
+              <b>Creator:</b> Spotify<br>
+              <a href="${playlists[0][0]['Capricorn'][0]["link"]}">(link to playlist)</a></p>
+            </div>
+            
+            <div class="col s3" style="padding-top: 20px;">
+              <h5><b>${playlists[0][0]['Capricorn'][1]["name"]}</b></h5>
+              <i>${playlists[0][0]['Capricorn'][1]["description"]}</i>
+              <br>
+              <b>Creator:</b> Spotify<br>
+              <a href="${playlists[0][0]['Capricorn'][1]["link"]}">(link to playlist)</a></p>
+            </div>
+            
+            <div class="col s3" style="padding-top: 20px;">
+            <h5><b>${playlists[0][0]['Capricorn'][2]["name"]}</b></h5>
+            <i>${playlists[0][0]['Capricorn'][2]["description"]}</i>
+            <br>
+            <b>Creator:</b> Spotify<br>
+            <a href="${playlists[0][0]['Capricorn'][2]["link"]}">(link to playlist)</a></p>
+            </div>
+            
+            <div class="col s3" style="padding-top: 20px;">
+              <h5><b>${playlists[0][0]['Capricorn'][3]["name"]}</b></h5>
+              <i>${playlists[0][0]['Capricorn'][3]["description"]}</i>
+              <br>
+              <b>Creator:</b> Spotify<br>
+              <a href="${playlists[0][0]['Capricorn'][3]["link"]}">(link to playlist)</a></p>
+            </div>
+            
+            </div>`
         }
         else if (userBirthday >= 20 && userBirthday <= 49) {
             userSign = "Aquarius";
-            p.innerHTML = `<p>You are an <b>${userSign}</b>! Aquarius is the 11th sign of the Zodiac and is associated with future ideas and the unusual. Individuals born under this sign are thought to have a modest, creative, challenging, inquisitive, entertaining, progressive, stimulating, nocturnal, and independent character. They are also prone to rebelliousness, coldness, erraticism, indecisiveness, and impracticality.</p>`
+            p.innerHTML = `<p>You are an <b>${userSign}</b>! Aquarius is the 11th sign of the Zodiac and is associated with future ideas and the unusual. Individuals born under this sign are thought to have a modest, creative, challenging, inquisitive, entertaining, progressive, stimulating, nocturnal, and independent character. They are also prone to rebelliousness, coldness, erraticism, indecisiveness, and impracticality.</p>
+            
+            <div class="row">
+
+            <div class="col s3" style="padding-top: 20px;">
+              <h5><b>${playlists[0][0]['Aquarius'][0]["name"]}</b></h5>
+              <i>${playlists[0][0]['Aquarius'][0]["description"]}</i>
+              <br>
+              <b>Creator:</b> Spotify<br>
+              <a href="${playlists[0][0]['Aquarius'][0]["link"]}">(link to playlist)</a></p>
+            </div>
+            
+            <div class="col s3" style="padding-top: 20px;">
+              <h5><b>${playlists[0][0]['Aquarius'][1]["name"]}</b></h5>
+              <i>${playlists[0][0]['Aquarius'][1]["description"]}</i>
+              <br>
+              <b>Creator:</b> Spotify<br>
+              <a href="${playlists[0][0]['Aquarius'][1]["link"]}">(link to playlist)</a></p>
+            </div>
+            
+            <div class="col s3" style="padding-top: 20px;">
+            <h5><b>${playlists[0][0]['Aquarius'][2]["name"]}</b></h5>
+            <i>${playlists[0][0]['Aquarius'][2]["description"]}</i>
+            <br>
+            <b>Creator:</b> Spotify<br>
+            <a href="${playlists[0][0]['Aquarius'][2]["link"]}">(link to playlist)</a></p>
+            </div>
+            
+            <div class="col s3" style="padding-top: 20px;">
+              <h5><b>${playlists[0][0]['Aquarius'][3]["name"]}</b></h5>
+              <i>${playlists[0][0]['Aquarius'][3]["description"]}</i>
+              <br>
+              <b>Creator:</b> Spotify<br>
+              <a href="${playlists[0][0]['Aquarius'][3]["link"]}">(link to playlist)</a></p>
+            </div>
+            
+            </div>`
         }
         else if (userBirthday >= 50 && userBirthday <= 80) {
             userSign = "Pisces";
-            p.innerHTML = `<p>You are a <b>${userSign}</b>! Pisces is the 12th and last sign of the Zodiac and is associated with human emotions. Individuals born under this sign are thought to be tolerant, modest, dreamy, romantic, humorous, generous, emotional, receptive, and affectionate. They are thought to have an honest character. But they are also prone to exaggeration, fickleness, passiveness, hypersensitivity, and paranoia.</p>`
+            p.innerHTML = `<p>You are a <b>${userSign}</b>! Pisces is the 12th and last sign of the Zodiac and is associated with human emotions. Individuals born under this sign are thought to be tolerant, modest, dreamy, romantic, humorous, generous, emotional, receptive, and affectionate. They are thought to have an honest character. But they are also prone to exaggeration, fickleness, passiveness, hypersensitivity, and paranoia.</p>
+            
+            <div class="row">
+
+            <div class="col s3" style="padding-top: 20px;">
+              <h5><b>${playlists[0][0]['Pisces'][0]["name"]}</b></h5>
+              <i>${playlists[0][0]['Pisces'][0]["description"]}</i>
+              <br>
+              <b>Creator:</b> Spotify<br>
+              <a href="${playlists[0][0]['Pisces'][0]["link"]}">(link to playlist)</a></p>
+            </div>
+            
+            <div class="col s3" style="padding-top: 20px;">
+              <h5><b>${playlists[0][0]['Pisces'][1]["name"]}</b></h5>
+              <i>${playlists[0][0]['Pisces'][1]["description"]}</i>
+              <br>
+              <b>Creator:</b> Spotify<br>
+              <a href="${playlists[0][0]['Pisces'][1]["link"]}">(link to playlist)</a></p>
+            </div>
+            
+            <div class="col s3" style="padding-top: 20px;">
+            <h5><b>${playlists[0][0]['Pisces'][2]["name"]}</b></h5>
+            <i>${playlists[0][0]['Pisces'][2]["description"]}</i>
+            <br>
+            <b>Creator:</b> Spotify<br>
+            <a href="${playlists[0][0]['Pisces'][2]["link"]}">(link to playlist)</a></p>
+            </div>
+            
+            <div class="col s3" style="padding-top: 20px;">
+              <h5><b>${playlists[0][0]['Pisces'][3]["name"]}</b></h5>
+              <i>${playlists[0][0]['Pisces'][3]["description"]}</i>
+              <br>
+              <b>Creator:</b> Spotify<br>
+              <a href="${playlists[0][0]['Pisces'][3]["link"]}">(link to playlist)</a></p>
+            </div>
+            
+            </div>`
         }
         else {
             p.innerHTML = "Invalid birthday entered; please re-enter your birthday."
@@ -482,4 +816,10 @@ const listOfPlaylistsTemplate = () => { //not being used atm
   </table>`
 }
 
-// HTML FOR PLAYLIST RESULTS
+// // Initial Render
+function initialize() {
+    renderHomePage();
+    loadPlaylists();
+}
+
+initialize();

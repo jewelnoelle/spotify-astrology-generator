@@ -82,13 +82,13 @@
 
 // FETCHING...
 
-const loadPlaylists = () => {
-        fetch("https://cat-fact.herokuapp.com/facts")
-        .then(resp => resp.json())
-        .then(data => console.log(data))
-}
+// const loadPlaylists = () => {
+//         fetch("http://localhost:3000")
+//         .then(resp => resp.json())
+//         .then(data => console.log(data))
+// }
 
-loadPlaylists();
+// loadPlaylists();
 
 // PLAYLIST RESULTS, HTML -- old
 
