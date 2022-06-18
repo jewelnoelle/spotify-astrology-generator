@@ -681,7 +681,7 @@ function renderPlaylistGeneratorPage() {
     h3.style.paddingRight = "20px"
     h3.style.paddingTop = "20px"
 
-    p.innerText = "Input your birthday below for your playlist!"
+    p.innerText = "Input your birthday below for your playlists!"
     p.style.paddingLeft = "20px"
 
     input.type = "date"
