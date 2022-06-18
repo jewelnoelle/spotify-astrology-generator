@@ -157,9 +157,6 @@ let dec = 335;
         // Build Results Section
         let results = document.createElement("li")
         results.className = 'results'
-        // results.innerHTML = `
-        
-        // `
 
         if (userBirthday >= 81 && userBirthday <= 110) {
             userSign = "Aries";
