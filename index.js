@@ -246,34 +246,38 @@ let dec = 335;
             userSign = "Gemini";
             p.innerHTML = `<p>You are a <b>${userSign}</b>! Gemini is the third sign of the Zodiac and is associated with youth and versatility. Individuals born under this sign are thought to have a sociable, fun-loving, versatile, lively, communicative, liberal, intelligent, mentally active, and friendly character. They are also thought to be prone to moodiness, inconsistency, superficiality, restlessness, and laziness.</p>
             
-            <div class="row">
+                  <div class="row">
 
-            <div class="col s4" style="padding-top: 20px;">
-              <h5><b>${playlists[0][0]['Gemini'][0]["name"]}</b></h5>
-              <i>${playlists[0][0]['Gemini'][0]["description"]}</i>
-              <br>
-              <b>Creator:</b> Spotify<br>
-              <a href="${playlists[0][0]['Gemini'][0]["link"]}">(link to playlist)</a></p>
-            </div>
-            
-            <div class="col s4" style="padding-top: 20px;">
-              <h5><b>${playlists[0][0]['Gemini'][1]["name"]}</b></h5>
-              <i>${playlists[0][0]['Gemini'][1]["description"]}</i>
-              <br>
-              <b>Creator:</b> Spotify<br>
-              <a href="${playlists[0][0]['Gemini'][1]["link"]}">(link to playlist)</a></p>
-            </div>
-            
-            <div class="col s4" style="padding-top: 20px;">
-            <h5><b>${playlists[0][0]['Gemini'][2]["name"]}</b></h5>
-            <i>${playlists[0][0]['Gemini'][2]["description"]}</i>
-            <br>
-            <b>Creator:</b> Spotify<br>
-            <a href="${playlists[0][0]['Gemini'][2]["link"]}">(link to playlist)</a></p>
-            </div>
-            
-            
-            </div>`
+                  <div class="col s4">
+                  <center>
+                    <h5><b>${playlists[0][0]['Gemini'][0]["name"]}</b></h5>
+                    <i>${playlists[0][0]['Gemini'][0]["description"]}</i>
+                    <br>
+                    <b>Creator:</b> Spotify<br>
+                    <a href="${playlists[0][0]['Gemini'][0]["link"]}">(PLAYLIST LINK)</a></p>
+                  </center>
+                  </div>
+                  
+                  <div class="col s4">
+                  <center>
+                    <h5><b>${playlists[0][0]['Gemini'][1]["name"]}</b></h5>
+                    <i>${playlists[0][0]['Gemini'][1]["description"]}</i>
+                    <br>
+                    <b>Creator:</b> Spotify<br>
+                    <a href="${playlists[0][0]['Gemini'][1]["link"]}">(PLAYLIST LINK)</a></p>
+                  </center>
+                  </div>
+                  
+                  <div class="col s4">
+                  <center>
+                  <h5><b>${playlists[0][0]['Gemini'][2]["name"]}</b></h5>
+                  <i>${playlists[0][0]['Gemini'][2]["description"]}</i>
+                  <br><br>
+                  <b>Creator:</b> Spotify<br>
+                  <a href="${playlists[0][0]['Gemini'][2]["link"]}">(PLAYLIST LINK)</a></p>
+                  </center>
+                  </div>
+        </div>`
         }
         else if (userBirthday >= 173 && userBirthday <= 204) {
             userSign = "Cancer";
@@ -714,12 +718,6 @@ function renderPlaylistGeneratorPage() {
 
 }
 
-function renderPlaylistResultsPage () { //might not need
-    resetMainDiv();
-
-    mainDiv().innerHTML = listOfPlaylistsTemplate();
-}
-
 // Helpers
 function resetMainDiv() {
     mainDiv().innerHTML = ""
@@ -730,7 +728,6 @@ const mainDiv = () => document.getElementById("main")
 const homePageLink = () => document.getElementById("home-page-link")
 const startGeneratorButton = () => document.getElementById("start-generator-link")
 const generatePlaylistsButton = () => document.getElementById("generate-playlists-link")
-const playlistResultsPage = () => document.getElementById("playlist-results")
 
 // EventListeners
 
@@ -750,41 +747,6 @@ document.addEventListener("DOMContentLoaded", () => {
     attachHomePageClickEvent();
     attachStartGeneratorClickEvent();
 })
-
-// TEMPLATES
-
-const listOfPlaylistsTemplate = () => { //not being used atm
-    return `
-    <p style="padding-top: 20px">Your sign is <strong>Sign</strong></p>
-
-    <table class="highlight" id="playlist-results">
-    <thead>
-      <tr>
-          <th>Playlist</th>
-          <th>Duration</th>
-          <th>Playlist Link</th>
-      </tr>
-    </thead>
-
-    <tbody>
-      <tr>
-        <td>Aries playlist</td>
-        <td>5hr 27m</td>
-        <td>hello</td>
-      </tr>
-      <tr>
-        <td>Alan</td>
-        <td>Jellybean</td>
-        <td>$3.76</td>
-      </tr>
-      <tr>
-        <td>Jonathan</td>
-        <td>Lollipop</td>
-        <td>$7.00</td>
-      </tr>
-    </tbody>
-  </table>`
-}
 
 // // Initial Render
 function initialize() {
