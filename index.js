@@ -165,7 +165,6 @@ function findBirthday () {
       p.innerHTML = `<p>You are an <b>${userSign}</b>! ${playlists[0][0]['Aries'][0]["characteristics"]}</p>
 
       <div class="row">
-
         <div class="col s3" style="padding-top: 20px;">
           <h5><b>${playlists[0][0]['Aries'][0]["name"]}</b></h5>
           <i>${playlists[0][0]['Aries'][0]["description"]}</i>

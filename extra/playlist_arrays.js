@@ -1,6 +1,4 @@
-
-// START OF ARRAYS
-
+// // PLAYLIST ARRAYS;
 // const ariesPlaylists = [
 //     "37i9dQZF1DX2DC3Q7JOmYe", // Aries
 //     "37i9dQZF1DX66m4icL86Ru", // BBE
@@ -79,58 +77,3 @@
 //     "37i9dQZF1DWVIzZt2GAU4X", // Piano Ballads
 //     "37i9dQZF1DX56qfiUZBncF" // Creativity Boost
 // ]
-
-// FETCHING...
-
-// const loadPlaylists = () => {
-//         fetch("http://localhost:3000")
-//         .then(resp => resp.json())
-//         .then(data => console.log(data))
-// }
-
-// loadPlaylists();
-
-// PLAYLIST RESULTS, HTML -- old
-
-// (baseUrl + signPlaylist[index] + "?market=US") //add headers?
-
-/* <div class="row">
-
-  <div class="col s3" style="padding-top: 20px; border: 3px solid pink lighten-4;  border-radius: 8px;">
-    <h5><b>[Playlist Name]</b></h5>
-    <i>[Playlist description.]</i>
-    <br></br>
-    <b>About Playlist:</b>
-    <b>Creator:</b> [Spotify]
-    <b>Why:</b> [explanation]
-  </div>
-
-  <div class="col s3" style="padding-top: 20px; border: 3px solid pink lighten-4;  border-radius: 8px;">
-    <h5><b>[Playlist Name]</b></h5>
-    <i>[Playlist description.]</i>
-    <br></br>
-    <b>About Playlist:</b>
-    <b>Creator:</b> [Spotify]
-    <b>Why:</b> [explanation]
-  </div>
-
-  <div class="col s3" style="padding-top: 20px; border: 3px solid pink lighten-4;  border-radius: 8px;">
-    <h5><b>[Playlist Name]</b></h5>
-    <i>[Playlist description.]</i>
-    <br></br>
-    <b>About Playlist:</b>
-    <b>Creator:</b> [Spotify]
-    <b>Why:</b> [explanation]
-  </div>
-
-  <div class="col s3" style="padding-top: 20px; border: 3px solid pink lighten-4;  border-radius: 8px;">
-    <h5><b>[Playlist Name]</b></h5>
-    <i>[Playlist description.]</i>
-    <br></br>
-    <b>About Playlist:</b>
-    <b>Creator:</b> [Spotify]
-    <b>Why:</b> [explanation]
-  </div>
-  
-  </div>
- */
