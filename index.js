@@ -165,7 +165,7 @@ function findBirthday () {
           <i>${playlists[0][0]['Gemini'][0]["description"]}</i>
           <br>
           <b>Creator:</b> Spotify<br>
-          <a href="${playlists[0][0]['Gemini'][0]["link"]}">(PLAYLIST LINK)</a></p>
+          <a href="${playlists[0][0]['Gemini'][0]["link"]}">(link to playlist)</a></p>
         </div>
           
         <div class="col s4">
@@ -173,7 +173,7 @@ function findBirthday () {
           <i>${playlists[0][0]['Gemini'][1]["description"]}</i>
           <br>
           <b>Creator:</b> Spotify<br>
-          <a href="${playlists[0][0]['Gemini'][1]["link"]}">(PLAYLIST LINK)</a></p>
+          <a href="${playlists[0][0]['Gemini'][1]["link"]}">(link to playlist)</a></p>
         </div>
         
         <div class="col s4">
@@ -181,7 +181,7 @@ function findBirthday () {
           <i>${playlists[0][0]['Gemini'][2]["description"]}</i>
           <br><br>
           <b>Creator:</b> Spotify<br>
-          <a href="${playlists[0][0]['Gemini'][2]["link"]}">(PLAYLIST LINK)</a></p>
+          <a href="${playlists[0][0]['Gemini'][2]["link"]}">(link to playlist)</a></p>
         </div>
       </div>`
     }
