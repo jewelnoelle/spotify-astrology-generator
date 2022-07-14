@@ -1,0 +1,345 @@
+{
+    "results": {
+        "Aries":
+        {
+            "sign": "Aries",
+            "characteristics": "Aries is the first sign of the Zodiac. It is associated with fresh vigor and new beginnings. Individuals born under this sign are said to have an enthusiastic, adventurous, and passionate character. They are usually ambitious, humorous, and pioneering. On the less positive side, they're also said to be prone to selfishness, boastfulness, intolerance, impulsiveness, and impatience.",
+
+            "1": 
+                {
+                    "name": "Aries",
+                    "description": "Tracks for The Ram.",
+                    "playlistLink": "https://open.spotify.com/playlist/37i9dQZF1DX2DC3Q7JOmYe?si=868b783e540443a8"
+                },
+            "2":            
+                {  
+                    "name": "BBE",
+                    "description": "Bad b**** energy. Be blessed, be spicy.",
+                    "playlistLink": "https://open.spotify.com/playlist/37i9dQZF1DX66m4icL86Ru?si=6434eb084a464105"
+                },
+            "3":
+                {
+                    "name": "K-Hip-Hop +82",
+                    "description": "Representin' +82 Korean Hip-Hop's sickest rhymes and beats.",
+                    "playlistLink": "https://open.spotify.com/playlist/37i9dQZF1DWW46Vfs1oltB?si=5453128a8b154b1b"
+                },
+            "4":
+                {
+                    "name": "TrenChill K-Hip-Hop",
+                    "description": "Trendy x Chill K-Hip Hop.",
+                    "playlistLink": "https://open.spotify.com/playlist/37i9dQZF1DWWvmOXYvR5a6?si=f24541a56bd24074"
+                }
+        },
+
+        "Taurus":
+        {
+            "sign": "Taurus",
+            "characteristics": "Taurus is the second sign of the Zodiac and is associated with material pleasure. Individuals born under this sign are thought to have a calm, patient, reliable, loyal, affectionate, sensuous, ambitious, and determined character. They are also prone to hedonism, laziness, inflexibility, jealousy, and antipathy.",
+
+            "1": 
+                {
+                    "name": "Taurus",
+                    "description": "Tracks for The Bull.",
+                    "playlistLink": "https://open.spotify.com/playlist/37i9dQZF1DXbCgDGG5xQtb?si=079349cb98434dba"
+                },
+            "2":            
+                {  
+                    "name": "Feeling Accomplished",
+                    "description": "Celebrate yourself with a fun pop & hip hop mix.",
+                    "playlistLink": "https://open.spotify.com/playlist/37i9dQZF1DWTDafB3skWPN?si=81c462990c8345c9"
+                },
+            "3":
+                {
+                    "name": "Monday Motivation",
+                    "description": "Giving motivation to your Monday. You got this!",
+                    "playlistLink": "https://open.spotify.com/playlist/37i9dQZF1DX1OY2Lp0bIPp?si=721a1965cf3f4199"
+                },
+            "4":
+                {
+                    "name": "Cozy Blend",
+                    "description": "Enjoy a break with some relaxing soft songs.",
+                    "playlistLink": "https://open.spotify.com/playlist/37i9dQZF1DXcxacyAXkQDu?si=057337cb81c34f32"
+                }
+        },
+
+        "Gemini":
+        {
+            "sign": "Gemini",
+            "characteristics": "Gemini is the third sign of the Zodiac and is associated with youth and versatility. Individuals born under this sign are thought to have a sociable, fun-loving, versatile, lively, communicative, liberal, intelligent, mentally active, and friendly character. They are also thought to be prone to moodiness, inconsistency, superficiality, restlessness, and laziness.",
+
+            "1": 
+                {
+                    "name": "Gemini",
+                    "description": "Tracks for The Twins.",
+                    "playlistLink": "https://open.spotify.com/playlist/37i9dQZF1DWWVULl5wUsL9?si=547940cce86e47ea"
+                },
+            "2":            
+                {  
+                    "name": "Feelin' Myself",
+                    "description": "The hip-hop playlist that's a whole mood.",
+                    "playlistLink": "https://open.spotify.com/playlist/37i9dQZF1DX6GwdWRQMQpq?si=3ad0d0070af542b1"
+                },
+            "3":
+                {
+                    "name": "Energy Booster: K-Pop",
+                    "description": "Need to get your energy level up? This will help!",
+                    "link": "https://open.spotify.com/playlist/37i9dQZF1DWSnRSDTCsoPk?si=e464cac20b934fb9"
+                }
+        },
+
+        "Cancer":
+        {
+            "sign": "Cancer",
+            "characteristics": "Cancer is the fourth sign of the Zodiac. It is associated with family and domesticity. Individuals born under this sign are thought to have a kind, emotional, romantic, imaginative, sympathetic, nurturing, and intuitive character. They are also supposed to be prone to changeability, moodiness, hypersensitivity, depression, and clingy behavior.",
+
+            "1": 
+                {
+                    "name": "Cancer",
+                    "description": "Tracks for The Crab.",
+                    "playlistLink": "https://open.spotify.com/playlist/37i9dQZF1DXaeX3MJpiD4U"
+                },
+            "2":            
+                {  
+                    "name": "Timeless Love Songs",
+                    "description": "The ultimate romantic playlist.",
+                    "playlistLink": "https://open.spotify.com/playlist/37i9dQZF1DX7rOY2tZUw1k"
+                },
+            "3":
+                {
+                    "name": "Piano Ballads",
+                    "description": "Vocals and keys, front and center.",
+                    "playlistLink": "https://open.spotify.com/playlist/37i9dQZF1DWVIzZt2GAU4X?si=5f217a3f29a447dc"
+                }
+        },
+
+        "Leo":
+        {
+            "sign": "Leo",
+            "characteristics": "Leo is the fifth sign of the Zodiac and is associated with the keywords magnanimous, generous, hospitable, caring, warm, authoritative, active, and open. Leos are typically pictured as very dignified and regal. They are hard-working, ambitious, and enthusiastic, however, they are supposedly prone to laziness, often choosing to take 'the easy way out.' They are known to be exuberant, extroverted, and generous. They have a natural dramatic flair and are very creative. They are typically very self-assured and love taking center-stage in whatever arena they are in.",
+
+            "1": 
+                {
+                    "name": "Leo",
+                    "description": "Tracks for The Lion.",
+                    "playlistLink": "https://open.spotify.com/playlist/37i9dQZF1DX7cvHpkIJFt2"
+                },
+            "2":            
+                {  
+                    "name": "Confidence Boost",
+                    "description": "You're on top of the world. Don't forget it.",
+                    "playlistLink": "https://open.spotify.com/playlist/37i9dQZF1DX4fpCWaHOned"
+                },
+            "3":
+                {
+                    "name": "BBE",
+                    "description": "Bad b**** energy. Be blessed, be spicy.",
+                    "playlistLink": "https://open.spotify.com/playlist/37i9dQZF1DX66m4icL86Ru?si=6434eb084a464105"
+                },
+            "4":
+                {
+                    "name": "K-Hip-Hop +82",
+                    "description": "Representin' +82 Korean Hip-Hop's sickest rhymes and beats.",
+                    "playlistLink": "https://open.spotify.com/playlist/37i9dQZF1DWW46Vfs1oltB?si=5453128a8b154b1b"
+                }
+        },
+
+        "Virgo":
+        {
+            "sign": "Virgo",
+            "characteristics": "Virgo is the sixth sign of the Zodiac. It is associated with purity and service. Individuals born under this sign are thought to have a diligent, analytical, self-sufficient, controlled, orderly, and modest character. But they are also prone to fussiness, perfectionism, harsh criticism, coldness, and hypochondria.",
+
+            "1": 
+                {
+                    "name": "Virgo",
+                    "description": "Tracks for The Maiden.",
+                    "playlistLink": "https://open.spotify.com/playlist/37i9dQZF1DX6PdsVYbP4rI"
+                },
+            "2":            
+                {  
+                    "name": "Feeling Accomplished",
+                    "description": "Celebrate yourself with a fun pop & hip hop mix.",
+                    "playlistLink": "https://open.spotify.com/playlist/37i9dQZF1DWTDafB3skWPN?si=81c462990c8345c9"
+                },
+            "3":
+                {
+                    "name": "Motivation Mix",
+                    "description": "Uplifting and energetic music that helps you stay motivated.",
+                    "playlistLink": "https://open.spotify.com/playlist/37i9dQZF1DXdxcBWuJkbcy"
+                }
+        },
+
+        "Libra":
+        {
+            "sign": "Libra",
+            "characteristics": "Libra is the seventh sign of the Zodiac. It is associated with justice. Individuals born under this sign are thought to have a pleasant, articulate, charming, social, charismatic character. They are artistic. But they also possess a fair, refined, diplomatic, even-tempered and self-sufficient character. On the negative side, they are thought to be indecisive, lazy, aloof, flirtatious, and shallow. They are also supposedly extravagant, frivolous, impatient, envious, and quarrelsome.",
+
+            "1": 
+                {
+                    "name": "Libra",
+                    "description": "Tracks for The Scales.",
+                    "playlistLink": "https://open.spotify.com/playlist/37i9dQZF1DXco4NYQOMLiT"
+                },
+            "2":            
+                {  
+                    "name": "Feelin' Myself",
+                    "description": "The hip-hop playlist that's a whole mood.",
+                    "playlistLink": "https://open.spotify.com/playlist/37i9dQZF1DX6GwdWRQMQpq?si=3ad0d0070af542b1"
+                },
+            "3":
+                {
+                    "name": "Energy Booster: K-Pop",
+                    "description": "Need to get your energy level up? This will help!",
+                    "playlistLink": "https://open.spotify.com/playlist/37i9dQZF1DWSnRSDTCsoPk?si=e464cac20b934fb9"
+                }
+        },
+
+        "Scorpio":
+        {
+            "sign": "Scorpio",
+            "characteristics": "Scorpio is the eighth sign of the Zodiac. It is associated with intensity, passion, and power. Individuals born under this sign are thought to have a complex, analytical, patient, keenly perceptive, inquisitive, focused, determined, hypnotic, and self-contained character. They are also prone to extremity, jealousy, envy, secretiveness, possessiveness, cruelty, and cunning.",
+
+            "1": 
+                {
+                    "name": "Scorpio: Dua Saleh Takeover",
+                    "description": "Tracks for The Scorpion with guest curation by Dua Saleh.",
+                    "playlistLink": "https://open.spotify.com/playlist/37i9dQZF1DX0YZgrwmizcR"
+                },
+            "2":            
+                {  
+                    "name": "Power Ballads",
+                    "description": "All your favorite hairbrush anthems!",
+                    "playlistLink": "https://open.spotify.com/playlist/37i9dQZF1DX3xgbKZSVZNH"
+                },
+            "3":
+                {
+                    "name": "Piano Ballads",
+                    "description": "Vocals and keys, front and center.",
+                    "playlistLink": "https://open.spotify.com/playlist/37i9dQZF1DWVIzZt2GAU4X?si=5f217a3f29a447dc"
+                },
+            "4":
+                {
+                    "name": "Are & Be",
+                    "description": "The pulse of R&B music today.",
+                    "playlistLink": "https://open.spotify.com/playlist/37i9dQZF1DX4SBhb3fqCJd"
+                }
+        },
+
+        "Sagittarius":
+        {
+            "sign": "Sagittarius",
+            "characteristics": "Sagittarius is the ninth sign of the Zodiac. It is associated with travel and expansion. Individuals born under this sign are thought to have a straight-forward, dynamic, highly intelligent, extremely clever, ethical, humorous, generous, open-hearted, compassionate, and energetic character. They are also prone to restlessness, impulsiveness, impatience, and recklessness.",
+
+            "1": 
+                {
+                    "name": "Sagittarius",
+                    "description": "Tracks for The Archer.",
+                    "playlistLink": "https://open.spotify.com/playlist/37i9dQZF1DX93MXPufCcuk"
+                },
+            "2":            
+                {  
+                    "name": "K-Hip-Hop +82",
+                    "description": "Representin' +82 Korean Hip-Hop's sickest rhymes and beats.",
+                    "playlistLink": "https://open.spotify.com/playlist/37i9dQZF1DWW46Vfs1oltB?si=5453128a8b154b1b"
+                },
+            "3":
+                {
+                    "name": "Fresh Finds Experimental",
+                    "description": "The best new experimental music by independent artists and labels.",
+                    "playlistLink": "https://open.spotify.com/playlist/37i9dQZF1DX8C585qnMYHP?si=e51381b0b85b404c"
+                }
+        },
+
+        "Capricorn":
+        {
+            "sign": "Capricorn",
+            "characteristics": "Capricorn is the 10th sign of the Zodiac and is associated with hard work and business affairs. Individuals born under this sign are thought to have an ambitious, modest, patient, responsible, stable, trustworthy, powerful, intellectual, perspicacious, and persistent character. They are also prone to coldness, conservatism, rigidity, materialism, and dullness.",
+
+            "1": 
+                {
+                    "name": "Capricorn",
+                    "description": "Tracks for The Goat.",
+                    "playlistLink": "https://open.spotify.com/playlist/37i9dQZF1DX2rcqmLx0nK4"
+                },
+            "2":            
+                {  
+                    "name": "Feeling Accomplished",
+                    "description": "Celebrate yourself with a fun pop & hip hop mix.",
+                    "playlistLink": "https://open.spotify.com/playlist/37i9dQZF1DWTDafB3skWPN?si=81c462990c8345c9"
+                },
+            "3":
+                {
+                    "name": "Work It, Own It",
+                    "description": "Empowered rhymes and vibes.",
+                    "playlistLink": "https://open.spotify.com/playlist/37i9dQZF1DXbmCTvLQy5AO"
+                },
+            "4":
+                {
+                    "name": "Morning Motivation",
+                    "description": "Get your day off to a cracking start!",
+                    "playlistLink": "https://open.spotify.com/playlist/37i9dQZF1DXc5e2bJhV6pu"
+                }
+        },
+
+        "Aquarius":
+        {
+            "sign": "Aquarius",
+            "characteristics": "Aquarius is the 11th sign of the Zodiac and is associated with future ideas and the unusual. Individuals born under this sign are thought to have a modest, creative, challenging, inquisitive, entertaining, progressive, stimulating, nocturnal, and independent character. They are also prone to rebelliousness, coldness, erraticism, indecisiveness, and impracticality.",
+
+            "1": 
+                {
+                    "name": "Aquarius",
+                    "description": "Tracks for The Water Bearer.",
+                    "playlistLink": "https://open.spotify.com/playlist/37i9dQZF1DX7F9VDRJOFhw"
+                },
+            "2":            
+                {  
+                    "name": "Fresh Finds Experimental",
+                    "description": "The best new experimental music by independent artists and labels.",
+                    "playlistLink": "https://open.spotify.com/playlist/37i9dQZF1DX8C585qnMYHP?si=e51381b0b85b404c"
+                },
+            "3":
+                {
+                    "name": "Energy Booster: K-Pop",
+                    "description": "Need to get your energy level up? This will help!",
+                    "playlistLink": "https://open.spotify.com/playlist/37i9dQZF1DWSnRSDTCsoPk?si=e464cac20b934fb9"
+                },
+            "4":
+                {
+                    "name": "Alternative Hip-Hop",
+                    "description": "New, left-field, and for the real hip-hop stans!",
+                    "playlistLink": "https://open.spotify.com/playlist/37i9dQZF1DWTggY0yqBxES"
+                }
+        },
+
+        "Pisces":
+        {
+            "sign": "Pisces",
+            "characteristics": "Pisces is the 12th and last sign of the Zodiac and is associated with human emotions. Individuals born under this sign are thought to be tolerant, modest, dreamy, romantic, humorous, generous, emotional, receptive, and affectionate. They are thought to have an honest character. But they are also prone to exaggeration, fickleness, passiveness, hypersensitivity, and paranoia.",
+
+            "1": 
+                {
+                    "name": "Pisces",
+                    "description": "Tracks for The Fish.",
+                    "playlistLink": "https://open.spotify.com/playlist/37i9dQZF1DWX0EDWtabVRv"
+                },
+            "2":            
+                {  
+                    "name": "Dreamy Vibes",
+                    "description": "Hypnotic bliss.",
+                    "playlistLink": "https://open.spotify.com/playlist/37i9dQZF1DWSiZVO2J6WeI"
+                },
+            "3":
+                {
+                    "name": "Piano Ballads",
+                    "description": "Vocals and keys, front and center.",
+                    "playlistLink": "https://open.spotify.com/playlist/37i9dQZF1DWVIzZt2GAU4X?si=5f217a3f29a447dc"
+                },
+            "4":
+                {
+                    "name": "Creativity Boost",
+                    "description": "Let these innovative tracks spark your creativity and inspiration.",
+                    "playlistLink": "https://open.spotify.com/playlist/37i9dQZF1DX56qfiUZBncF"
+                }
+        }
+    }
+}

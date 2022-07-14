@@ -2,7 +2,7 @@
 const playlists = []
 
 const loadPlaylists = () => {
-    fetch("http://localhost:3000/playlists")
+    fetch("http://localhost:3000/results")
     .then(resp => resp.json())
     .then(data => playlists.push(data))
 }
@@ -70,6 +70,13 @@ function findBirthday () {
       userBirthday = dec + parseInt(birthDate[2]);
   }
 
+  function printResults(userSign) {
+    const p = document.createElement("p");
+
+    p.innerHTML = `<p>You are an <b>${playlists[0][userSign]["sign"]}</b>! ${playlists[0][userSign]["characteristics"]}</p>`
+    p.innerText = ``
+  }
+
   function findSign(userBirthday) {
     // calculates user's sign based on their birthday & describes their sign
 
@@ -81,41 +88,63 @@ function findBirthday () {
 
     if (userBirthday >= 81 && userBirthday <= 110) {
       userSign = "Aries";
-      p.innerHTML = `<p>You are an <b>${userSign}</b>! ${playlists[0][0]['Aries'][0]["characteristics"]}</p>
+      printResults(userSign);
 
-      <div class="row">
-        <div class="col s3" style="padding-top: 20px;">
-          <h5><b>${playlists[0][0]['Aries'][0]["name"]}</b></h5>
-          <i>${playlists[0][0]['Aries'][0]["description"]}</i>
-          <br>
-          <b>Creator:</b> Spotify<br>
-          <a href="${playlists[0][0]['Aries'][0]["link"]}">(link to playlist)</a></p>
-        </div>
 
-        <div class="col s3" style="padding-top: 20px;">
-          <h5><b>${playlists[0][0]['Aries'][1]["name"]}</b></h5>
-          <i>${playlists[0][0]['Aries'][1]["description"]}</i>
-          <br>
-          <b>Creator:</b> Spotify<br>
-          <a href="${playlists[0][0]['Aries'][1]["link"]}">(link to playlist)</a></p>
-        </div>
+      // data.forEach(([key, value]) => {
+      //   p.innerHTML = `${key}: ${value}`
+      //   p.innerHTML = `${key}: ${value}`
+      //   p.innerHTML = `${key}: ${value}`
+      // });
+     
+      // for (const key in playlists[0][0]['Aries']) {
+      //   p.innerHTML = `<h3>${key.name}<h3>`,
+      //   p.innerHTML = `<i>${key.description}</i>`,
+      //   p.innerHTML = `<b>Creator:</b> Spotify`,
+      //   p.innerHTML = `<a href="${key.playlistLink}">(link to playlist)</a>`
+      // }
 
-        <div class="col s3" style="padding-top: 20px;">
-          <h5><b>${playlists[0][0]['Aries'][2]["name"]}</b></h5>
-          <i>${playlists[0][0]['Aries'][2]["description"]}</i>
-          <br>
-          <b>Creator:</b> Spotify<br>
-          <a href="${playlists[0][0]['Aries'][2]["link"]}">(link to playlist)</a></p>
-        </div>
+      // playlists[0][0]['Aries'].map((playlist) => 
+      //   p.innerHTML = `<h3>${playlist.name}<h3>`,
+      //   p.innerHTML = `<i>${playlist.description}</i>`,
+      //   p.innerHTML = `<b>Creator:</b> Spotify`,
+      //   p.innerHTML = `<a href=${playlist.link}>(link to playlist)</a>`
+      // )
 
-        <div class="col s3" style="padding-top: 20px;">
-          <h5><b>${playlists[0][0]['Aries'][3]["name"]}</b></h5>
-          <i>${playlists[0][0]['Aries'][3]["description"]}</i>
-          <br>
-          <b>Creator:</b> Spotify<br>
-          <a href="${playlists[0][0]['Aries'][3]["link"]}">(link to playlist)</a></p>
-        </div>
-      </div>`
+      // p.innerHTML = `
+      // <div class="row">
+      //   <div class="col s3" style="padding-top: 20px;">
+      //     <h5><b>${playlists[0][0]['Aries'][0]["name"]}</b></h5>
+      //     <i>${playlists[0][0]['Aries'][0]["description"]}</i>
+      //     <br>
+      //     <b>Creator:</b> Spotify<br>
+      //     <a href="${playlists[0][0]['Aries'][0]["link"]}">(link to playlist)</a></p>
+      //   </div>
+
+      //   <div class="col s3" style="padding-top: 20px;">
+      //     <h5><b>${playlists[0][0]['Aries'][1]["name"]}</b></h5>
+      //     <i>${playlists[0][0]['Aries'][1]["description"]}</i>
+      //     <br>
+      //     <b>Creator:</b> Spotify<br>
+      //     <a href="${playlists[0][0]['Aries'][1]["link"]}">(link to playlist)</a></p>
+      //   </div>
+
+      //   <div class="col s3" style="padding-top: 20px;">
+      //     <h5><b>${playlists[0][0]['Aries'][2]["name"]}</b></h5>
+      //     <i>${playlists[0][0]['Aries'][2]["description"]}</i>
+      //     <br>
+      //     <b>Creator:</b> Spotify<br>
+      //     <a href="${playlists[0][0]['Aries'][2]["link"]}">(link to playlist)</a></p>
+      //   </div>
+
+      //   <div class="col s3" style="padding-top: 20px;">
+      //     <h5><b>${playlists[0][0]['Aries'][3]["name"]}</b></h5>
+      //     <i>${playlists[0][0]['Aries'][3]["description"]}</i>
+      //     <br>
+      //     <b>Creator:</b> Spotify<br>
+      //     <a href="${playlists[0][0]['Aries'][3]["link"]}">(link to playlist)</a></p>
+      //   </div>
+      // </div>`
     }
     else if (userBirthday >= 111 && userBirthday <= 141) {
       userSign = "Taurus";
@@ -496,7 +525,7 @@ function findBirthday () {
       </div>`
     }
     else {
-      p.innerHTML = "Invalid birthday entered; please re-enter your birthday."
+      p.innerText = "Invalid birthday entered; please re-enter your birthday."
     }
 
     let pDiv = document.getElementById("sign-result")
@@ -628,6 +657,19 @@ function attachStartGeneratorClickEvent() {
 
 const form = document.getElementById("form");
 
+
+function testItOut () {
+  const p = document.createElement('p');
+
+  playlists[0][0]['Aries'].map(playlist => 
+    p.innerHTML = `<h3>${playlist.name}<h3>`,
+    p.innerHTML = `<i>${playlist.description}</i>`,
+    p.innerHTML = `<b>Creator:</b> Spotify`,
+    p.innerHTML = `<a href=${playlist.link}>(link to playlist)</a>`
+  )
+
+
+}
 // DOMContentLoaded
 document.addEventListener("DOMContentLoaded", () => {
   renderHomePage();
